@@ -213,7 +213,7 @@
             // echo "requète reussi";
         }else echo "echec de requète";
         $fact =$r->fetch_assoc();
-        $f_pdf = new FPDF('L','mm','A4');
+        $f_pdf = new FPDF();
         $f_pdf ->AddPage();
         $f_pdf ->SetFont('Arial', 'B',17);
     
@@ -234,7 +234,8 @@
         $f_pdf->Ln(3);
         $f_pdf->Cell(40,10,'Contact du Récepteur : '.$fact['contactRecepteur'],0,1,'L');
         $f_pdf->Ln(3);
-        $f_pdf ->Output();
+        $f_pdf ->Output('C:/Users/Thierry Christophe/Desktop/fi.pdf','F');
+
        
     }
 

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        body{
+            min-height: 100vh;
+            background: url(hero-bg.jpg) center/cover;
+            background:linear-gradient(45deg, #161616,#3171b9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        table, th, td{
+            padding: 1rem;
+            border-collapse: collapse;
+        }
+        main.table{
+            width: auto;
+            height: auto;
+            background-color: #fff4;
+            backdrop-filter: blur(7px);
+            box-shadow: 0 .4rem .8rem #0005;
+            border-radius: .8rem;
+            padding-bottom: .8rem;
+        }
+        .table_header{
+            width: auto;
+            height :10%;
+            background-color: #fff4;
+            padding: .8rem 1rem;
+
+        }
+        .table_body{
+            width: auto;
+            max-height: auto;
+            background-color: #fffb;
+            margin: .8rem auto;
+            border-radius: 0.6rem;
+            margin: 1rem;
+            }
+
+            thead tr {
+background-color: midnightblue;
+color: white;
+
+}
+th, td{
+padding: 10px 20px;
+}
+/* tbody tr, td, th{
+border-right: 1px solid #ddd;
+} */
+
+            
+    </style>
+</head>
+<body>
+    <main class="table">
+        <section class="table_header">
+            <h1>Custom header</h1>
+            <p>Frais max : 25000</p>
+            <form  method="get" action="resultat_recherche.php" >
+                <input type="search" name="recherche" placeholder="Recherche">
+                <input type="submit" value="Recherche">
+            </form>
+            <a href="insertion_envoyer.php"><img class="icons" src="img/ajout.jfif" alt="ajouter" width="20px" height="20px"></a>
+
+        </div>
+
+        </section>
+        <section class="table_body">
+            <table class="tableau">
+                <thead>
+                    <tr>
+                        <th>JJ</th>
+                        <th>JJ</th>
+                        <th>JJ</th>
+                        <th>JJ</th>
+                        <th>JJ</th>
+                        <th>JJ</th>
+                        <th>JJ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>dd</td>
+                        <td>dd</td>
+                        <td>dd</td>
+                        <td>dd</td>
+                        <td>dd</td>
+                        <td>dd</td>
+                        <td>dd</td>
+                    </tr>
+                    <tr>
+                        <td>dd</td>
+                        <td>dd</td>
+                        <td>dd</td>
+                        <td>dd</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+</body>
+</html>

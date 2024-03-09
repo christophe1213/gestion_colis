@@ -356,10 +356,18 @@ background-color: #f3f3f3;
     .selection:optional{
         border-radius: 15px;
     }
+    .titre_projet{
+        color: #194574;
+        
+    }
+    nav{
+        margin-left: 200px;
+    }
     </style>
 </head>
 <body id="corps">
 <header class="tete" >
+    <h1 class='titre_projet'>Géstion de colis coopérative</h1>
       <nav>
         <ul class="nav_menu">
           <li><a id="navbar" href="index.php">Acceuil</a></li>

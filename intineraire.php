@@ -68,9 +68,12 @@ include "header.php";
         cont=document.querySelectorAll('.contenaire');
         //cacher par defaut tout les contenaire
         for(i=0;i<cont.length;i++){
-            cont[i].style.visibility="hidden";
+            cont[i].style.display="none";
         }
         
+    </script>
+    <script>
+
     </script>
 </body>
 </html>

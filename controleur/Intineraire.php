@@ -7,7 +7,7 @@
                         <section class=\"table_header\">
                             <h1>Intineraire</h1>
               
-                <a href=\"insertion_intineraire.php\"><img class=\"icons\" src=\"../icons/ajout.jfif\" alt=\"ajouter\"></a>
+                <a id='ajout' href=\"insertion_intineraire.php\"><img class=\"icons\" src=\"../icons/ajout.jfif\" alt=\"ajouter\"></a>
     
             
     
@@ -33,10 +33,10 @@
                  echo "<td>".$line["codeit"]."</td>";
                  echo "<td>".$line["villedep"]."</td>";
                  echo "<td>".$line["villearriv"]."</td>";
-                 echo "<td><a href=\"modifier_Intineraire.php?id=".$line["codeit"]."&villedep=".$line["villedep"]."&villearriv=".$line["villearriv"]."\">
+                 echo "<td><a id=\"modif\" href=\"modifier_Intineraire.php?id=".$line["codeit"]."&villedep=".$line["villedep"]."&villearriv=".$line["villearriv"]."\">
                 <img src=\"../icons/modifier.jfif\" alt=\"modifier\" ></a></td>";        
 
-                echo "<td><a href=\"supprimer_Intineraire.php?id=".$line["codeit"]."\">
+                echo "<td><a id=\"supp\" href=\"supprimer_Intineraire.php?id=".$line["codeit"]."\">
                     <img src=\"../icons/supprimer.png\" alt=\"supprimer\"></a></td>";        
                  echo"</tr>";
         
@@ -81,6 +81,7 @@
            
         }   
     }
+    
     function supprimer_intneraire($c)
     {
         if(isset($_GET["id"]))

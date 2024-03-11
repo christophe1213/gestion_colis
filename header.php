@@ -198,7 +198,8 @@ color: white;
 
 }
 th, td{
-padding: 10px 20px;
+/* padding: 10px 20; */
+/* width: 100px; */
 }
 .b{
     /* background: url(hero-bg.jpg) center/cover;
@@ -210,11 +211,23 @@ padding: 10px 20px;
     width: 100%;
 }
 td img{
-    width: 25px;
+   width: 25px;
     height: 25px;
     margin-right: .5rem ;
     }
- tbody tr:nth-child(even){
+.id{
+    width: -10px;
+}    
+.frais{
+    width: 100px;
+}
+.date{
+    width: 200px;
+}
+tr:hover,tr:nth-child(even):hover{
+    background-color:  #007bff;;
+}
+tbody tr:nth-child(even){
 background-color: #f3f3f3;
 }
   .pdf{
@@ -281,7 +294,7 @@ background-color: #f3f3f3;
     }
     
     .btn_confi_lien:hover{
-        color: aliceblue;
+        color: ;
     }
 .icons{
   width: 25px;

@@ -35,7 +35,7 @@
         echo "<table class=\"tableau\">
         <thead>
             <tr>
-                <th>Numero </th>
+                <th class=\"id\">Numero </th>
                 <th> Voiture </th>
                 <th>Colis</th>
                 <th>Nom de l'envoyeur</th>
@@ -55,13 +55,13 @@
             
             while($line = $r->fetch_assoc()){
                  echo" <tr>";
-                 echo "<td>".$line["idenvoi"]."</td>";
+                 echo "<td class=\"id\">".$line["idenvoi"]."</td>";
                  echo "<td>".$line["idvoit"]."</td>";
                  echo "<td>".$line["colis"]."</td>";
                  echo "<td>".$line["nomEnvoyeur"]."</td>";
                  echo "<td>".$line["emailEnvoyeur"]."</td>";
-                 echo "<td>".$line["date_envoi"]."</td>";
-                 echo "<td>".$line["frais"]." Ar</td>";
+                 echo "<td class=\"date\">".$line["date_envoi"]."</td>";
+                 echo "<td class=\"frais\">".$line["frais"]." Ar</td>";
                  echo "<td>".$line["nomRecepteur"]."</td>";
                  echo "<td>".$line["contactRecepteur"]."</td>";
                 echo "<td><a href=\"modifier_envoye.php?id=".$line["idenvoi"].
@@ -73,10 +73,10 @@
                                                         "&frais=".$line["frais"].
                                                         "&nomRecepteur=".$line["nomRecepteur"].
                                                         "&contactRecepteur=".$line["contactRecepteur"]."\">
-                <img src=\"../img/modifier.jfif\" alt=\"modifier\" width=\"25px\" height=\"25px\"></a></td>";        
+                <img src=\"../icons/modifier.jfif\" alt=\"modifier\" width=\"25px\" height=\"25px\"></a></td>";        
 
                 echo "<td><a href=\"supprimer_envoye.php?id=".$line["idenvoi"]."\">
-                    <img src=\"../img/supprimer.png\" alt=\"supprimer\" width=\"25px\" height=\"25px\"></a></td>";        
+                    <img src=\"../icons/supprimer.png\" alt=\"supprimer\" width=\"25px\" height=\"25px\"></a></td>";        
                  echo"</tr>";
         
             }

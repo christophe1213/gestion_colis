@@ -1,9 +1,13 @@
 <?php
     use  Dompdf\Dompdf;
-    require_once'dompdf/autoload.inc.php';
+    require_once 'dompdf/autoload.inc.php';
     $pdf = new Dompdf();
-    $pdf->loadHtml('Hello');
+    ob_start();
+    require_once 'facture.html';
+    $html=ob_get_contents();
+    ob_end_clean();
+    $pdf->loadHtml($html);
     $pdf->render();
-    $pdf->stream('');
+    $pdf->stream('Fichier.pdf');
 
 ?>

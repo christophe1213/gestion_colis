@@ -10,8 +10,8 @@ if(isset($_GET["supp"])){
 
 
 include __DIR__."/../header.php";
-$query = "SELECT * FROM intineraire; ";
-affichage_Intineraire($conn, $query);
+// $query = "SELECT * FROM intineraire; ";
+// affichage_Intineraire($conn, $query);
 
 
 

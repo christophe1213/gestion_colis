@@ -1,6 +1,8 @@
 <?php
     include "Execution_Requete.php";
     require('fpdf/fpdf.php');
+
+   
     function affichage_envoyer($c, $q)
     {
         $query = "SELECT * FROM envoyer; ";
@@ -131,6 +133,7 @@
                     \"".$contactRecepteur."\");";
           execution_requete($c, $query);
           header('Location:generer_pdf.php?id='.$idenvoi);
+        //    header('Location:dompdf.php?id='.$idenvoi);     
   
         }
     }

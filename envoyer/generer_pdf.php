@@ -22,8 +22,10 @@
                 <p>Génerer en pdf</p>
             <?php
                    $i = $_GET["id"];
-                   echo "<button class=\"pdf\"><a href=\"pdf.php?id=".$i."\"><img src=\"../icons/printer.svg\" alt=\"modifier\" > </a></button>";  
+                //    echo "<button class=\"pdf\"><a href=\"pdf.php?id=".$i."\"><img src=\"../icons/printer.svg\" alt=\"modifier\" > </a></button>";  
+                   echo "<button class=\"pdf\"><a href=\"dompdf.php?id=".$i."\"><img src=\"../icons/printer.svg\" alt=\"modifier\" > </a></button>";  
             ?>
+         
             </div>
 
         </div>

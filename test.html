@@ -5,111 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: sans-serif;
-        }
         body{
-            min-height: 100vh;
-            background: url(hero-bg.jpg) center/cover;
-            background:linear-gradient(45deg, #161616,#3171b9);
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            background: url(img/fond.avif)  center/cover ;
         }
-        table, th, td{
-            padding: 1rem;
-            border-collapse: collapse;
+        #ap{
+            background-color: #0005;
+            /* width: 1024px; */
+            height: 1024px;
+           
         }
-        main.table{
-            width: auto;
-            height: auto;
-            background-color: #fff4;
-            backdrop-filter: blur(7px);
-            box-shadow: 0 .4rem .8rem #0005;
-            border-radius: .8rem;
-            padding-bottom: .8rem;
-        }
-        .table_header{
-            width: auto;
-            height :10%;
-            background-color: #fff4;
-            padding: .8rem 1rem;
-
-        }
-        .table_body{
-            width: auto;
-            max-height: auto;
-            background-color: #fffb;
-            margin: .8rem auto;
-            border-radius: 0.6rem;
-            margin: 1rem;
-            }
-
-            thead tr {
-background-color: midnightblue;
-color: white;
-
-}
-th, td{
-padding: 10px 20px;
-}
-/* tbody tr, td, th{
-border-right: 1px solid #ddd;
-} */
-
-            
     </style>
+    <!-- <link rel="stylesheet" href="style.css"> -->
 </head>
 <body>
-    <main class="table">
-        <section class="table_header">
-            <h1>Custom header</h1>
-            <p>Frais max : 25000</p>
-            <form  method="get" action="resultat_recherche.php" >
-                <input type="search" name="recherche" placeholder="Recherche">
-                <input type="submit" value="Recherche">
-            </form>
-            <a href="insertion_envoyer.php"><img class="icons" src="img/ajout.jfif" alt="ajouter" width="20px" height="20px"></a>
+    <div id="ap">
+        <div class="a">
+            <!-- <div class="suppression">
+                <a class="fermer" href="interface_intineraire.php"><img class="icons" src="icons/delete.png" alt="fermer"></a>
+                <p>Vous voulez supprimer</p>
+                <button class="btn_confi"><a class="btn_confi_lien" href="">Oui</a></button>
+                <button class="btn_confi"><a class="btn_confi_lien" href="">Non</a></button> -->
+            <!-- </div> -->
+    </div>
+   
+</div>
+<script>
+var ap = document.getElementById('ap')
 
-        </div>
+ap.style.width=document.body.style.width
 
-        </section>
-        <section class="table_body">
-            <table class="tableau">
-                <thead>
-                    <tr>
-                        <th>JJ</th>
-                        <th>JJ</th>
-                        <th>JJ</th>
-                        <th>JJ</th>
-                        <th>JJ</th>
-                        <th>JJ</th>
-                        <th>JJ</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>dd</td>
-                        <td>dd</td>
-                        <td>dd</td>
-                        <td>dd</td>
-                        <td>dd</td>
-                        <td>dd</td>
-                        <td>dd</td>
-                    </tr>
-                    <tr>
-                        <td>dd</td>
-                        <td>dd</td>
-                        <td>dd</td>
-                        <td>dd</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-
-    </main>
+</script>
 </body>
 </html>

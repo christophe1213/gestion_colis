@@ -7,7 +7,7 @@
                         <section class=\"table_header\">
                             <h1>Intineraire</h1>
               
-                <a id='ajout' href=\"insertion_intineraire.php\"><img class=\"icons\" src=\"../icons/ajout.jfif\" alt=\"ajouter\"></a>
+                <a id='ajout' href=\"insertion_intineraire.php\"><img class=\"icons\" src=\"../../Style/icons/ajout.jfif\" alt=\"ajouter\" title=\"ajout\"></a>
     
             
     
@@ -34,10 +34,10 @@
                  echo "<td>".$line["villedep"]."</td>";
                  echo "<td>".$line["villearriv"]."</td>";
                  echo "<td><a id=\"modif\" href=\"modifier_Intineraire.php?id=".$line["codeit"]."&villedep=".$line["villedep"]."&villearriv=".$line["villearriv"]."\">
-                <img src=\"../icons/modifier.jfif\" alt=\"modifier\" ></a></td>";        
+                <img src=\"../../Style/icons/modifier.jfif\" alt=\"modifier\" ></a></td>";        
 
                 echo "<td><a id=\"supp\" href=\"supprimer_Intineraire.php?id=".$line["codeit"]."\">
-                    <img src=\"../icons/supprimer.png\" alt=\"supprimer\"></a></td>";        
+                    <img src=\"../../Style/icons/supprimer.png\" alt=\"supprimer\"></a></td>";        
                  echo"</tr>";
         
             }

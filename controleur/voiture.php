@@ -8,7 +8,7 @@
                         <section class=\"table_header\">
                             <h1>Voiture</h1>
               
-                <a href=\"insertion_voiture.php\"><img class=\"icons\" src=\"../icons/ajout.jfif\" alt=\"ajouter\"></a>
+                <a href=\"insertion_voiture.php\"><img class=\"icons\" src=\"../../Style/icons/ajout.jfif\" alt=\"ajouter\" title=\"ajouter\"></a>
     
             
     
@@ -37,10 +37,10 @@
                  echo "<td>".$line["Design"]."</td>";
                  echo "<td>".$line["frais"]."</td>";
                 echo "<td><a href=\"modifier_voiture.php?id=".$line["idvoit"]."&codeit=".$line["codeit"]."&Design=".$line["Design"]."&frais=".$line["frais"]."\">
-                <img src=\"../icons/modifier.jfif\" alt=\"modifier\" width=\"25px\" height=\"25px\"></a></td>";        
+                <img src=\"../../Style/icons/modifier.jfif\" alt=\"modifier\" width=\"25px\" height=\"25px\"></a></td>";        
 
                 echo "<td><a href=\"supprimer_voiture.php?id=".$line["idvoit"]."\">
-                    <img src=\"../icons/supprimer.png\" alt=\"supprimer\" width=\"25px\" height=\"25px\"></a></td>";        
+                    <img src=\"../../Style/icons/supprimer.png\" alt=\"supprimer\" width=\"25px\" height=\"25px\"></a></td>";        
                  echo"</tr>";
         
             }

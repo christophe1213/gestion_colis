@@ -1,11 +1,12 @@
 <?php
-    include "header.php"
+    include "Interface/header.php"
 ?>
- <script src="js/navbar.js"></script>
+ <script src="Style/js/b.js"></script>
     <script>
         document.title="Acceil"
         titre=document.querySelectorAll("#navbar")
         nav_courante("Acceuil")
+        document.body.style.background="url(Style/img/fond.avif) center/cover"
     </script>
 </body>
 

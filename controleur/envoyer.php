@@ -1,8 +1,5 @@
 <?php
-    include "Execution_Requete.php";
-    require('fpdf/fpdf.php');
-
-   
+    include "Execution_Requete.php";  
     function affichage_envoyer($c, $q)
     {
         $query = "SELECT * FROM envoyer; ";
@@ -19,15 +16,15 @@
           <form class=\"search\" method=\"get\" action=\"resultat_recherche.php\" >
         <input type=\"datetime-local\" name=\"date_dep\" placeholder=\"date debut\">
         <input type=\"datetime-local\" name=\"date_fin\" placeholder=\"date fin\">
-        <button type =\"submit\"><img class=\"icons\"  src=\"../icons/search.png\" alt=\"Recherche\"></button>
+        <button type =\"submit\"><img class=\"icons\"  src=\"../../Style/icons/search.png\" alt=\"Recherche\"></button>
     </form>       
         </div>";
                 echo      "  <form class=\"search\" method=\"get\" action=\"resultat_recherche.php\" >
                     <input type=\"search\" name=\"recherche\" placeholder=\"Recherche\">
-                    <button type =\"submit\"><img class=\"icons\"  src=\"../icons/search.png\" alt=\"Recherche\"></button>
+                    <button type =\"submit\"><img class=\"icons\"  src=\"../../Style/icons/search.png\" alt=\"Recherche\"></button>
                 </form>
               
-                <a href=\"insertion_envoyer.php\"><img class=\"icons\" src=\"../icons/ajout.jfif\" alt=\"ajouter\"></a>
+                <a href=\"insertion_envoyer.php\"><img class=\"icons\" src=\"../../Style/icons/ajout.jfif\" alt=\"ajouter\" title=\"ajout\"\></a>
     
             
     
@@ -205,41 +202,5 @@
         $querry = "SELECT * FROM envoyer where date_envoi  between '$d1' and '$d2';";
         affichage_envoyer($c,$querry);
 
-    }
-    
-    function generer_pdf($c,$i)
-    {
-   
-        $sql = "SELECT * FROM envoyer where idenvoi=\"".$i."\" ;";
-        if($r = $c->query($sql)){
-            // echo "requète reussi";
-        }else echo "echec de requète";
-        $fact =$r->fetch_assoc();
-        $f_pdf = new FPDF();
-        $f_pdf ->AddPage();
-        $f_pdf ->SetFont('Arial', 'B',17);
-    
-        $f_pdf ->Cell(40,10,$i,1,0, 'C');
-        $f_pdf->Ln(10);
-        $f_pdf->SetFont('Arial','',12 );
-        $f_pdf->Cell(40,10, 'Date d\'envoi : '.date($fact["date_envoi"]),0,1,'L');
-        $f_pdf->Ln(3);
-        $f_pdf->Cell(40,10,'Nom de l\'Envoyeur : '.$fact['nomEnvoyeur'],0,1,'L');
-        $f_pdf->Ln(3);
-        $f_pdf->Cell(40,10,'Id de voiture  : '.$fact['idvoit'],0,1,'L');
-        $f_pdf->Ln(3);
-        $f_pdf->Cell(40,10,'Colis : '.$fact['colis'],0,1,'L');
-        $f_pdf->Ln(3);
-        $f_pdf->Cell(40,10,'Frais: '.$fact['frais'].' AR',0,1,'L');
-        $f_pdf->Ln(3);
-        $f_pdf->Cell(40,10,'Nom de Récepteur: '.$fact['nomRecepteur'],0,1,'L');
-        $f_pdf->Ln(3);
-        $f_pdf->Cell(40,10,'Contact du Récepteur : '.$fact['contactRecepteur'],0,1,'L');
-        $f_pdf->Ln(3);
-        $f_pdf ->Output('C:/Users/Thierry Christophe/Desktop/fi.pdf','F');
-
-       
-    }
-
-    
+    }   
 ?>

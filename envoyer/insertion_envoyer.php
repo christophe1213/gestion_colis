@@ -14,7 +14,17 @@
         <form class="ajout" action="insertion_envoyer.php" method = "POST">
         <a class="fermer" href="interface_Envoyer.php"><img class="icons" src="../icons/delete.png" alt="fermer"></a>
                 <label for="idenvoi">N°</label><br>
-                <input type="number" name="idenvoi" required ><br>
+                <?php
+                        include __DIR__."/../controleur/connection.php";
+                        // include __DIR__. "/../controleur/selection_donne.php";
+                        $querry="select max(idenvoi) from envoyer;";
+                        $r=$conn->query($querry);
+                        $line=$r->fetch_assoc();
+                        $id=$line['max(idenvoi)']+1;
+                        echo "<input type=\"number\" name=\"idenvoi\" value='$id' required ><br>";
+                        $conn->close();
+                    ?>
+                <!-- <input type="number" name="idenvoi" required ><br> -->
                 <label for="idvoit">N°voiture</label><br>
                 <select class="selection" name="idvoit">
                     <?php

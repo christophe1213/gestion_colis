@@ -133,7 +133,6 @@
                     \"".$contactRecepteur."\");";
           execution_requete($c, $query);
           header('Location:generer_pdf.php?id='.$idenvoi);
-        //    header('Location:dompdf.php?id='.$idenvoi);     
   
         }
     }

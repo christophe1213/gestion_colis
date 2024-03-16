@@ -36,12 +36,15 @@ $body="<body>
     </div>
 </body>  
 </html>";
-}
 ob_end_clean();
 $conn->close();
 $html=$html.$body;
    $pdf->loadHtml($html);
    $pdf->render();
-   $pdf->stream('envoye.pdf');
+   $pdf->stream('envoye'.$id.'.pdf');
+}else{
+    
+}
+
 
 ?>

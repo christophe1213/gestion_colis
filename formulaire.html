@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="css/style5.css"> -->
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            /* background:linear-gradient(45deg, #161616,#3171b9); */
+            /* height: 100vh; */
+            background: url(fond2.avif) center/cover;
+            height: 100vh;
+            /* width: 40vw; */
+            position: relative;
+            top: 150px;
+            /* display: flex;
+            justify-content: center; */
+            align-items: center;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+        .contenaire{
+            
+            position: absolute;
+            display: flex;
+            width: 100%;
+            justify-content: center;
+        }
+        .contenaire_tableau{
+            /* background-color: red; */
+            width: 81.8rem;
+            display: flex;
+            position: absolute;
+            top:-60px;
+            width: auto;
+            /* height: 90vh; */
+            margin-top: 50px;
+            margin-left: 300px;
+            background-color: #fff4;
+            backdrop-filter: blur(7px);
+            box-shadow: 0 .4rem .8rem #0005;
+            border-radius: .8rem;
+            justify-content: center;
+            display: flex;
+            justify-content: center;
+        }
+        .tableau
+        {   
+            /* position: absolute;
+            top:-50px; */
+            /* left:500px; */
+            /* display: flex;
+            justify-content: center; */
+            z-index: 5;
+        }
+        .a{
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            
+            background-color: violet;
+            width: 100%;
+
+        }
+        .b{
+            /* background: url(hero-bg.jpg) center/cover;
+            background:linear-gradient(45deg, #161616,#3171b9); */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            background-color:red;
+            width: 100%;
+}
+        .ajout{
+            z-index: 8;
+            background-color: rgba(255,255,255,.3);
+            padding: 3rem;
+            height: auto;
+            width: 200px;
+            border-radius: 20px;
+            border-left:1px solid rgba(255,255,255,.3) ;
+            border-top: 1px solid rgba(255,255,255,.3);
+            box-shadow: 20px 20px 40px -6px rgba(0,0,0,.3) ;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+
+        }
+        .titre_formulaire
+        {
+            color: white;
+            font-weight: 500;
+            opacity: .7;
+            font-size: 1.5rem;
+            margin-bottom: 60px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,.2);
+        }
+        input{
+            background: transparent;
+            border: none;
+
+            border-left: 1px solid rgba(255,255,255 ,.3);
+            border-top: 1px solid rgba(255,255,255 ,.3); 
+            padding: 0.3rem;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            box-shadow: 4px  4px 60px rgba(0,0,0,.3);
+            color: black;
+            font-weight: 500;
+            text-shadow: 2px 2px 4px rgba(0,0,0,.2);
+            /* width: 20px; */
+            border-radius: 20px;
+            transition: all 0.3s;
+            margin-bottom: 2em;
+
+        }
+
+        input:hover, input[type="text"]:focus{
+            background-color: rgba(255,255,255 ,.1);
+            box-shadow: 4px  4px 60px 8px rgba(0,0,0,.3);
+        }
+        input[type="submit"]{
+            cursor: pointer;
+            margin-top: 10px;
+            font-size: 1rem;
+            width: 150px;
+
+        }
+        .selection{
+            color:black
+        }
+        .drop{
+            background-color: rgba(255,255,255 ,.3);
+            backdrop-filter: 10px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            position: absolute;
+            border-left: 1px solid rgba(255,255,255 ,.3) ;
+            border-top: 1px solid rgba(255,255,255 ,.3);
+            border-radius: 10px;
+            box-shadow: 10px 10px 60px -8px rgba(0,0,0,.2);
+
+        }
+        .drop-1{
+            height: 10px;
+            width: 80px;
+            top:-20px;
+            left: -8px;
+        }
+        header{
+            background-color: #141414;
+            /* paddin: 20px; */
+            padding: 20px;
+            /* width: 81.8rem; */
+            display: flex;
+            position: absolute;
+            top: -150px;
+            justify-content:flex-end ;
+            align-items: center;
+  }
+  .nav_menu{
+    list-style: none;
+
+  }
+  .nav_menu li{
+    display: inline-block;
+    padding:20px
+
+  }
+  .nav_menu a
+  {
+    transition: all 0.3s ease 0s;
+  }
+  .nav_menu a:hover{
+      color: #007bff;
+  }
+  li, a{
+    font-family: sans-serif;
+    color: whitesmoke;
+    text-decoration: none;
+    font-weight: 500;
+
+  }
+  table, th, td{
+            padding: 1rem;
+            border-collapse: collapse;
+        }
+        main.table{
+            width: auto;
+            height: auto;
+            background-color: #fff4;
+            backdrop-filter: blur(7px);
+            box-shadow: 0 .4rem .8rem #0005;
+            border-radius: .8rem;
+            padding-bottom: .8rem;
+        }
+        .table_header{
+            width: auto;
+            height :auto;
+            background-color: #fff4;
+            padding: .8rem 1rem;
+
+        }
+        .table_body{
+            width: auto;
+            max-height: auto;
+            background-color: #fffb;
+            margin: .8rem auto;
+            border-radius: 0.6rem;
+            margin: 1rem;
+            }
+
+            thead tr {
+            background-color: midnightblue;
+        color: white;
+
+}
+th, td{
+padding: 10px 20px;
+}
+
+.fermer{
+    color: red;
+     margin-left: 200px;
+     position: relative;
+     bottom: 40px; 
+}
+.btn_confi{
+    
+        width: 100px;
+        height: 30px;
+        border-radius: 20px;
+        border: solid 0.1px white;
+        margin-top:20px;
+        margin-left:10px ;
+        margin-right:10px ;
+        background-color: #218838;
+        Background-color: rgba(240, 240, 240, 0.986);
+    
+      }
+    .suppression{
+        background-color: white;
+        z-index: 8;
+        /* Background-color: rgba(255,255,255 ,.1); */
+        padding: 3rem;
+         height: auto;
+         width: 250px;
+        border-radius: 20px;
+        border-left:1px solid rgba(255,255,255,.3) ;
+        border-top: 1px solid rgba(255,255,255,.3);
+        box-shadow: 20px 20px 40px -6px rgba(0,0,0,.3) ;
+        text-align: center;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+    .btn_confi:hover{
+        background-color: #47d365;
+    }
+    .btn_confi_lien{
+        color :black;
+        margin: 10px;
+        font-size: 17px;
+
+    }
+    .btn_confi_lien:hover{
+        color: aliceblue;
+    }
+
+    .selection{
+        width: 70px;
+        margin: 10px;
+        padding-top: 7px;
+        padding-bottom: 7px;
+        padding-left: 10px;
+        border-radius: 20px;
+        text-align: center;
+          /* background: transparent;
+            border: none;
+
+            border-left: 1px solid rgba(255,255,255 ,.3);
+            border-top: 1px solid rgba(255,255,255 ,.3); 
+            padding: 0.3rem;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            box-shadow: 4px  4px 60px rgba(0,0,0,.3);
+            color: black;
+            font-weight: 500;
+            text-shadow: 2px 2px 4px rgba(0,0,0,.2);
+            /* width: 20px; */
+            /* border-radius: 20px;
+            transition: all 0.3s;
+            margin-bottom: 2em; */ 
+    }
+    .selection:optional{
+        border-radius: 15px;
+        
+    }
+    </style>
+</head>
+<body>
+    <header >
+        
+        <nav>
+          <ul class="nav_menu">
+            <li><a href="index.php">Acceuil</a></li>
+            <li><a href="Intineraire/interface_intineraire.php">Intineraire</a></li>
+            <li><a href="interface_voiture.php">Voiture</a></li>
+            <li><a href="interface_envoyer.php">Envoyer</a></li>
+            <li><a href="interface_recevoir.php">Recevoir</a></li>
+          </ul>
+        </nav>
+      </header>
+      <div class="b">
+        <main class="table">
+            <section class="table_header">
+               
+                <h1>Custom header</h1>
+                <p>Frais max : 25000</p>
+                <form class="search" method="get" action="resultat_recherche.php" >
+                    <input type="search" name="recherche" placeholder="Recherche">
+                    <input type="submit" value="Recherche">
+                </form>
+              
+                <a href="insertion_envoyer.php"><img class="icons" src="img/ajout.jfif" alt="ajouter" width="20px" height="20px"></a>
+    
+            
+    
+            </section>
+            <section class="table_body">
+                
+                <table class="tableau">
+                    <thead>
+                        <tr>
+                            <th>JJ</th>
+                            <th>JJ</th>
+                            <th>JJ</th>
+                            <th>JJ</th>
+                            <th>JJ</th>
+                            <th>JJ</th>
+                            <th>JJ</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>dd</td>
+                            <td>dd</td>
+                            <td>dd</td>
+                            <td>dd</td>
+                            <td>dd</td>
+                            <td>dd</td>
+                            <td>dd</td>
+                        </tr>
+                        <tr>
+                            <td>dd</td>
+                            <td>dd</td>
+                            <td>dd</td>
+                            <td>dd</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+    
+    </div>
+  
+      </main>
+      <div class="a">
+        <div class="contenaire">
+        
+            <form class="ajout" >
+                <a class="fermer" href=""><img src="" alt="fermer"></a>
+                    <p class="titre_formulaire">Intineraire</p>
+                    <label for="codeit">Code Intinéraire</label><br>
+                    <select class="selection" name="" id="">
+                        <option  value="a" >a</option>
+                        <option value="b" selected>b</option>
+                        <option value="c">c</option>
+                    </select><br> 
+                    <label for="Nom">Ville départ</label>
+                    <input type="text" name="villedep" ><br>
+                    <label for="ville">Ville d'arrivée</label>
+                    <input type="text" name="villearriv" ><br>
+                    <input type="submit"value ="Ajouter" >
+            
+                </form>
+                <div class=""></div>
+                <div class="drop-1"></div>
+                <div class="drop-2"></div>
+                <div class="drop-3"></div>
+                <div class="drop-4"></div>
+                <div class="drop-5"></div>
+        </div>
+      </div>
+    
+    <!-- <div class="suppression">
+        <p>Vous voulez supprimer</p>
+        <button class="btn_confi"><a class="btn_confi_lien" href="">Oui</a></button>
+        <button class="btn_confi"><a class="btn_confi_lien" href="">Non</a></button>
+    </div> -->
+    <script src="js/b.js"></script>
+    <script>
+        console.log("d")
+        a("jj")
+    </script>
+</body>
+</html>

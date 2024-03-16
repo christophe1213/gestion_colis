@@ -9,8 +9,8 @@
   include __DIR__."/../header.php";
   
 
-   $query = "SELECT * FROM voiture; "; 
-   affichage_voiture($conn, $query);  
+//    $query = "SELECT * FROM voiture; "; 
+//    affichage_voiture($conn, $query);  
    $conn->close();
 
 ?>
@@ -50,5 +50,10 @@
         titre=document.querySelectorAll("#navbar")
         nav_courante("Voiture")
     </script>
+    <script src="../js/style.js"></script>
+    <script>
+        style(ajout)
+    </script>
+
 </body>
 </html>

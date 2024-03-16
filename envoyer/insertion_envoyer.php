@@ -4,8 +4,8 @@
      
       insertion_envoyer($conn);
       include __DIR__."/../header.php";
-      $query = "SELECT * FROM envoyer; ";
-      affichage_envoyer($conn,$query);
+    //   $query = "SELECT * FROM envoyer; ";
+    //   affichage_envoyer($conn,$query);
 
       $conn->close();
 ?>
@@ -70,6 +70,11 @@
         body =document.getElementById('corps')
         nav_courante("Envoyer")
     </script>
+    <script src="../js/style.js"></script>
+    <script>
+        style(ajout)
+    </script>
+
   
 </body>
 </html>

@@ -10,8 +10,6 @@ if(isset($_GET["supp"])){
 
 
 include __DIR__."/../header.php";
-$query = "SELECT * FROM intineraire; ";
-affichage_Intineraire($conn, $query);
 
 
 
@@ -30,13 +28,13 @@ $conn->close();
             </div>
 
         </div>
-    </div>  
+    </div> 
+    <div style{width:}></div> 
     <script src="../js/b.js"></script>
+    <script src="../js/style.js"></script>
     <script>
-        document.title="Intineraire"
-        titre=document.querySelectorAll("#navbar")
-       
-        nav_courante("Intineraire")
-       
-    </script>
+        style(suppression)
+    </script>        
+    </body>
+    </html>
    

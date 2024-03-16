@@ -4,8 +4,8 @@
     modifier_recevoir($conn);
 
     include __DIR__."/../header.php";
-    $query = "SELECT * FROM recevoir; ";
-    affichage_recevoir($conn, $query);
+    // $query = "SELECT * FROM recevoir; ";
+    // affichage_recevoir($conn, $query);
         
     $conn->close(); 
 ?>
@@ -53,6 +53,11 @@
         body =document.getElementById('corps')
         nav_courante("Recevoir")
     </script>
+    <script src="../js/style.js"></script>
+    <script>
+        style(ajout)
+    </script>
+
   
 </body>
 </html>

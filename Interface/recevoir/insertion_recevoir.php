@@ -1,6 +1,6 @@
 <?php
-    include __DIR__. "/../controleur/connection.php";
-    include __DIR__."/../controleur/recevoir.php";
+    include __DIR__. "/../../controleur/connection.php";
+    include __DIR__."/../../controleur/recevoir.php";
     //Fonction pour inserer des données
     insertion_recevoir($conn);
     include __DIR__."/../header.php";
@@ -12,15 +12,15 @@
 <div class="a">
     <div class="contenaire">
         <form  class="ajout" action="insertion_recevoir.php" method = "POST">
-            <a class="fermer" href="interface_recevoir.php"><img src="../icons/delete.png" class="icons" alt="fermer"></a>
+            <a class="fermer" href="interface_recevoir.php"><img class="icons" src="../../Style/icons/delete.png" alt="fermer"></a>
                 <label for="idrecept">Id recption</label><br>
                 <input type="number" name="idrecept" ><br>
                 <label for="idenvoi">Id envoi</label><br>
                 <!-- <input type="number" name="idenvoi" ><br> -->
                 <select class="selection" name="idenvoi">
                     <?php
-                        include __DIR__. "/../controleur/connection.php";
-                        include __DIR__."/../controleur/selection_donne.php";
+                        include __DIR__. "/../../controleur/connection.php";
+                        include __DIR__."/../../controleur/selection_donne.php";
                         $i="idenvoi";$table="envoyer";
                         //selection donnée pour code Intineraire
                         selection_donne($conn,$i,$table);
@@ -30,7 +30,7 @@
                 <label for="date_recept">date recption</label><br>
                 
                 <?php
-                    include __DIR__. "/../controleur/connection.php";
+                    include __DIR__. "/../../controleur/connection.php";
                     if($r = $conn->query("SELECT now();")){
                         while($row = $r->fetch_assoc()){
 
@@ -48,7 +48,7 @@
     </div>
 
 </div>
-<script src="../js/b.js"></script>
+<script src="../../Style/js/b.js"></script>
     <script>
         document.title="Recevoir"
         titre=document.querySelectorAll("#navbar")
@@ -57,7 +57,7 @@
         body =document.getElementById('corps')
         nav_courante("Recevoir")
     </script>
-    <script src="../js/style.js"></script>
+   <script src="../../Style/js/style.js"></script>
     <script>
         style(ajout)
     </script>

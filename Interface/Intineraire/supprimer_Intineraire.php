@@ -1,6 +1,7 @@
 <?php
 //Inclure les fonctions de l'intineaire, et les fonctions pour la connection de basse données
-
+include __DIR__."/../../controleur/Intineraire.php";
+include __DIR__ ."/../../controleur/connection.php";
 
 //Suppression de la donnée 
 if(isset($_GET["supp"])){
@@ -28,8 +29,14 @@ $conn->close();
 
         </div>
     </div> 
-    <div style{width:}></div> 
+
     <script src="../../Style/js/b.js"></script>
+    <script>
+        document.title="Intineraire"
+        titre=document.querySelectorAll("#navbar")
+       
+        nav_courante("Intineraire")
+    </script>
     <script src="../../Style/js/style.js"></script>
     <script>
         style(suppression)

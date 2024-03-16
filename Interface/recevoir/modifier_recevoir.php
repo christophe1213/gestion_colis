@@ -1,6 +1,6 @@
 <?php
-       include __DIR__. "/../controleur/connection.php";
-       include __DIR__."/../controleur/recevoir.php";
+    include __DIR__. "/../../controleur/connection.php";
+    include __DIR__."/../../controleur/recevoir.php";
     modifier_recevoir($conn);
 
     include __DIR__."/../header.php";
@@ -11,9 +11,9 @@
 ?>
 
     <?php
-    include __DIR__. "/../controleur/connection.php";
    
-    include __DIR__."/../controleur/selection_donne.php";
+   include __DIR__. "/../../controleur/connection.php";
+    include __DIR__."/../../controleur/selection_donne.php";
 
     echo "<div class=\"a\">";
     echo "<div class=\"contenaire\">";
@@ -25,7 +25,7 @@
         
 
              echo "<form  class=\"ajout\" action=\"modifier_recevoir.php\" method=\"POST\">
-             <a class=\"fermer\" href=\"interface_recevoir.php\"><img class=\"icons\" src=\"../icons/delete.png\" alt=\"fermer\"></a>
+             <a class=\"fermer\" href=\"interface_recevoir.php\"><img class=\"icons\" src=\"../../Style/icons/delete.png\" alt=\"fermer\" title=\"fermer\"></a>
                             <label for=\"idrecept\">N° reception</label>
                             <input type=\"number\" value=\"".$idrecpt."\" name=\"idrecept\"><br>
                             <label for=\"idenvoi\">N° envoye</label> 
@@ -44,7 +44,7 @@
     echo "</div>";
     echo "</div>";
     ?>
-   <script src="../js/b.js"></script>
+   <script src="../../Style/js/b.js"></script>
     <script>
         document.title="Recevoir"
         titre=document.querySelectorAll("#navbar")
@@ -53,7 +53,7 @@
         body =document.getElementById('corps')
         nav_courante("Recevoir")
     </script>
-    <script src="../js/style.js"></script>
+  <script src="../../Style/js/style.js"></script>
     <script>
         style(ajout)
     </script>

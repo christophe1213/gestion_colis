@@ -384,7 +384,7 @@ background-color: #f3f3f3;
       <nav>
         <ul class="nav_menu">
           <li><a id="navbar" href="index.php">Acceuil</a></li>
-          <li><a id="navbar" href="Interface/Intineraire/interface_intineraire.php">Intineraire</a></li>
+          <li><a id="navbar" href="Interface/Intineraire/interface_Intineraire.php">Intineraire</a></li>
           <li><a id="navbar" href="Voiture/interface_Voiture">Voiture</a></li>
           <li><a id="navbar" href="Envoyer/interface_Envoyer.php">Envoyer</a></li>
           <li><a id="navbar" href="Recevoir/interface_Recevoir.php">Recevoir</a></li>

@@ -72,10 +72,10 @@
                                                         "&frais=".$line["frais"].
                                                         "&nomRecepteur=".$line["nomRecepteur"].
                                                         "&contactRecepteur=".$line["contactRecepteur"]."\">
-                <img src=\"../icons/modifier.jfif\" alt=\"modifier\" width=\"25px\" height=\"25px\"></a></td>";        
+                <img src=\"../../Style/icons/modifier.jfif\" alt=\"modifier\" width=\"25px\" height=\"25px\"></a></td>";        
 
                 echo "<td><a href=\"supprimer_envoye.php?id=".$line["idenvoi"]."\">
-                    <img src=\"../icons/supprimer.png\" alt=\"supprimer\" width=\"25px\" height=\"25px\"></a></td>";        
+                    <img src=\"../../Style/icons/supprimer.png\" alt=\"supprimer\" width=\"25px\" height=\"25px\"></a></td>";        
                  echo"</tr>";
         
             }

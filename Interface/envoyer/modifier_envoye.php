@@ -1,6 +1,6 @@
 <?php
-     include __DIR__."/../controleur/envoyer.php";
-     include __DIR__ ."/../controleur/connection.php";
+    include __DIR__."/../../controleur/envoyer.php";
+    include __DIR__ ."/../../controleur/connection.php";
 
     modifier_envoyer($conn);
     include __DIR__. "/../header.php";
@@ -10,8 +10,8 @@
 ?>
 <body>
     <?php
-     include __DIR__. "/../controleur/connection.php";
-    include __DIR__. "/../controleur/selection_donne.php";
+     include __DIR__ ."/../../controleur/connection.php";
+    include __DIR__. "/../../controleur/selection_donne.php";
     echo "<div class=\"a\">";
     echo "<div class=\"contenaire\">";
     if( isset($_GET["id"])&&
@@ -35,7 +35,7 @@
             $contactRecepteur   = $_GET["contactRecepteur"];
 
              echo "<form class= \"ajout\" action=\"modifier_envoye.php\" method=\"POST\">
-             <a class=\"fermer\" href=\"interface_envoyer.php\"><img src=\"../icons/delete.png\" class=\"icons\"  alt=\"fermer\"></a
+             <a class=\"fermer\" href=\"interface_envoyer.php\"><img class=\"icons\" src=\"../../Style/icons/delete.png\" alt=\"fermer\" title=\"fermer\"></a
                             <label for=\"idenvoi\">N°</label>
                             <input type=\"number\" value=\"".$idenvoi."\" name=\"idenvoi\"><br>
                             <label for=\"idvoit\">id voiture</label><br>
@@ -80,7 +80,7 @@
         body =document.getElementById('corps')
         nav_courante("Envoyer")
     </script>
-    <script src="../js/style.js"></script>
+    <script src="../../Style/js/style.js"></script>
     <script>
         style(ajout)
     </script>

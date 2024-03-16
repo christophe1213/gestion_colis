@@ -14,7 +14,7 @@ require 'PHPMailer/src/SMTP.php';
                 <main class=\"table\">
             <section class=\"table_header\">
                 <h1>Recevoir</h1>
-                <a href=\"insertion_recevoir.php\"><img class=\"icons\" src=\"../icons/ajout.jfif\" alt=\"ajouter\" class=\"icoons\"></a>
+                <a href=\"insertion_recevoir.php\"><img class=\"icons\" src=\"../../Style/icons/ajout.jfif\" alt=\"ajouter\" title=\"ajout\"></a>
     
             
     
@@ -41,10 +41,10 @@ require 'PHPMailer/src/SMTP.php';
                  echo "<td>".$line["idenvoi"]."</td>";
                  echo "<td>".$line["date_recept"]."</td>";
                 echo "<td><a href=\"modifier_recevoir.php?id=".$line["idrecept"]."&idenvoi=".$line["idenvoi"]."&date_recept=".$line["date_recept"]."\">
-                <img src=\"../icons/modifier.jfif\" alt=\"modifier\" width=\"25px\" height=\"25px\"></a></td>";        
+                <img src=\"../../Style/icons/modifier.jfif\" alt=\"modifier\" width=\"25px\" height=\"25px\"></a></td>";        
 
                 echo "<td><a href=\"supprimer_recevoir.php?id=".$line["idrecept"]."\">
-                    <img src=\"../icons/supprimer.png\" alt=\"supprimer\" width=\"25px\" height=\"25px\"></a></td>";        
+                    <img src=\"../../Style/icons/supprimer.png\" alt=\"supprimer\" width=\"25px\" height=\"25px\"></a></td>";        
                  echo"</tr>";
         
             }

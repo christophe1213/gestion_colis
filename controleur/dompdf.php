@@ -1,6 +1,6 @@
 <?php
-  include __DIR__."/../../controleur/envoyer.php";
-  include __DIR__ ."/../../controleur/connection.php";
+  include "envoyer.php";
+  include "connection.php";
    use  Dompdf\Dompdf;
    require_once 'dompdf/autoload.inc.php';
  

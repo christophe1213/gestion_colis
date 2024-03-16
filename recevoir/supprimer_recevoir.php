@@ -5,8 +5,8 @@ if(isset($_GET["supp"])){
     supprimer_recevoir($conn);
 }
 include __DIR__."/../header.php";
-$query = "SELECT * FROM recevoir; ";
-affichage_recevoir($conn, $query);
+// $query = "SELECT * FROM recevoir; ";
+// affichage_recevoir($conn, $query);
 
 $conn->close();
 ?>
@@ -33,6 +33,10 @@ $conn->close();
         body =document.getElementById('corps')
         nav_courante("Recevoir")
         document.body.style.backgroundColor="black"
+    </script>
+      <script src="../js/style.js"></script>
+    <script>
+        style(suppression)
     </script>
     <body>
     </html>

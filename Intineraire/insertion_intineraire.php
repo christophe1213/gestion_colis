@@ -6,9 +6,9 @@
        
         include __DIR__."/../header.php";
         
-        $query = "SELECT * FROM intineraire; ";
+        // $query = "SELECT * FROM intineraire; ";
         
-        affichage_Intineraire($conn, $query);
+        // affichage_Intineraire($conn, $query);
     
         $conn->close();
    
@@ -37,8 +37,11 @@
         document.title="Intineraire"
         titre=document.querySelectorAll("#navbar")
        
-        nav_courante("Intineraire")
-       
+        nav_courante("Intineraire")    
+    </script>
+    <script src="../js/style.js"></script>
+    <script>
+        style(ajout)
     </script>
 
 </body>

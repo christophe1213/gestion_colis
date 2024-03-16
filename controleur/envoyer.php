@@ -1,6 +1,7 @@
 <?php
     include "Execution_Requete.php";
-    require('fpdf/fpdf.php');
+   
+   
     function affichage_envoyer($c, $q)
     {
         $query = "SELECT * FROM envoyer; ";

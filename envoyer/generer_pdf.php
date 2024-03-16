@@ -7,8 +7,8 @@
     include __DIR__."/../controleur/envoyer.php";
     include __DIR__ ."/../controleur/connection.php";  
     include __DIR__."/../header.php";
-      $query = "SELECT * FROM envoyer; ";
-      affichage_envoyer($conn, $query);
+    //   $query = "SELECT * FROM envoyer; ";
+    //   affichage_envoyer($conn, $query);
      
       $conn->close();
 ?>
@@ -22,8 +22,10 @@
                 <p>Génerer en pdf</p>
             <?php
                    $i = $_GET["id"];
-                   echo "<button class=\"pdf\"><a href=\"pdf.php?id=".$i."\"><img src=\"../icons/printer.svg\" alt=\"modifier\" > </a></button>";  
+                //    echo "<button class=\"pdf\"><a href=\"pdf.php?id=".$i."\"><img src=\"../icons/printer.svg\" alt=\"modifier\" > </a></button>";  
+                   echo "<button class=\"pdf\"><a href=\"dompdf.php?id=".$i."\"><img src=\"../icons/printer.svg\" alt=\"modifier\" > </a></button>";  
             ?>
+         
             </div>
 
         </div>
@@ -36,6 +38,11 @@
     <script>
         body =document.getElementById('corps')
         nav_courante("Envoyer")
+    </script>
+    <script src="../js/style.js"></script>
+    <script>
+
+        style(suppression)
     </script>
 </body>
 </html>

@@ -4,8 +4,8 @@
 
     modifier_envoyer($conn);
     include __DIR__. "/../header.php";
-    $query_affichage = "SELECT * FROM envoyer;";
-    affichage_envoyer($conn, $query_affichage);  
+    // $query_affichage = "SELECT * FROM envoyer;";
+    // affichage_envoyer($conn, $query_affichage);  
     $conn->close();
 ?>
 <body>
@@ -80,5 +80,10 @@
         body =document.getElementById('corps')
         nav_courante("Envoyer")
     </script>
+    <script src="../js/style.js"></script>
+    <script>
+        style(ajout)
+    </script>
+
 </body>
 </html>

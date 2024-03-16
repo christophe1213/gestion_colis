@@ -4,8 +4,8 @@
     //Fonction pour inserer des données
     insertion_recevoir($conn);
     include __DIR__."/../header.php";
-    $query = "SELECT * FROM recevoir;";
-    affichage_recevoir($conn, $query);
+    // $query = "SELECT * FROM recevoir;";
+    // affichage_recevoir($conn, $query);
     $conn->close();
 
 ?>
@@ -57,5 +57,10 @@
         body =document.getElementById('corps')
         nav_courante("Recevoir")
     </script>
-</body>
+    <script src="../js/style.js"></script>
+    <script>
+        style(ajout)
+    </script>
+
+</<body>
 </html>

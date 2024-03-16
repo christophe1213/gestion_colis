@@ -4,8 +4,8 @@
    
    modifier_intineraire($conn);
    include __DIR__."/../header.php";
-    $query_affichage = "SELECT * FROM Intineraire;";
-    affichage_Intineraire($conn, $query_affichage);  
+    // $query_affichage = "SELECT * FROM Intineraire;";
+    // affichage_Intineraire($conn, $query_affichage);  
     $conn->close(); 
 
 ?>
@@ -39,7 +39,11 @@
         titre=document.querySelectorAll("#navbar")
        
         nav_courante("Intineraire")
-       
     </script>
+      <script src="../js/style.js"></script>
+    <script>
+        style(ajout)
+    </script>
+
 </body>
 </html>

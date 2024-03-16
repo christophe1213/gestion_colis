@@ -7,9 +7,9 @@
     supprimer_voiture($conn);
 }        
   //Affichage de donné
-  $query = "SELECT * FROM voiture; ";
+//   $query = "SELECT * FROM voiture; ";
   include __DIR__."/../header.php";
-  affichage_voiture($conn, $query);
+//   affichage_voiture($conn, $query);
     $conn->close();
  
 ?>
@@ -19,11 +19,11 @@
 <div class='a'>
 <div class="contenaire">
             <div class="suppression">
-            <a class="fermer" href="interface_intineraire.php"><img class="icons" src="../icons/delete.png" alt="fermer"></a>
+            <a class="fermer" href="interface_Voiture.php"><img class="icons" src="../icons/delete.png" alt="fermer"></a>
                 <p>Vous voulez le supprimer</p>
                 <?php
                     echo"<button class=\"btn_confi\"><a class=\"btn_confi_lien\"  href=\"supprimer_voiture.php?supp=ok&id=".$_GET['id']."\">OUI</a></button>
-                        <button class=\"btn_confi\" ><a class=\"btn_confi_lien\"  href=\"interface_voiture.php\">NON</a></button>"
+                        <button class=\"btn_confi\" ><a class=\"btn_confi_lien\"  href=\"interface_Voiture.php\">NON</a></button>"
                 ?>
             </div>
 
@@ -36,6 +36,10 @@
         document.title="Voiture"
         titre=document.querySelectorAll("#navbar")
         nav_courante("Voiture")
+    </script>
+    <script src="../js/style.js"></script>
+    <script>
+        style(suppression)
     </script>
 </body>
 </html>

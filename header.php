@@ -41,7 +41,7 @@ body{
             justify-content: center;
             text-align: center;
             position: absolute;
-           
+            
             width: 100%;
            
 

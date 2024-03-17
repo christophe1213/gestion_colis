@@ -30,7 +30,7 @@
  
 </div>
 
-    <script src="../../js/b.js"></script>
+    <script src="../../Style/js/nav.js"></script>
     <script>
         document.title="Voiture"
         titre=document.querySelectorAll("#navbar")

@@ -17,7 +17,7 @@ body{
    
     /* height: 100vh; */
      /* background-color: #212121; */
-    background: url(img/fond.avif) center/cover;
+    background: url(Style/img/fond.avif) center/cover;
     height: 100vh;
     /* width: 40vw; */
     position: relative;

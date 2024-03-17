@@ -33,7 +33,7 @@
     
     ?>
  
-   <script src="../../Style/js/b.js"></script>
+    <script src="../../Style/js/nav.js"></script>
     <script>
         document.title="Intineraire"
         titre=document.querySelectorAll("#navbar")

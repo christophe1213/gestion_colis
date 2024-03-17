@@ -24,7 +24,7 @@
 
         </div>
     </div>  
-    <script src="../../Style/js/b.js"></script>
+    <script src="../../Style/js/nav.js"></script>
     <script>
         document.title="Envoyer"
         titre=document.querySelectorAll("#navbar")

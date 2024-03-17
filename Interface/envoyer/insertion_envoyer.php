@@ -21,7 +21,7 @@
                         $r=$conn->query($querry);
                         $line=$r->fetch_assoc();
                         $id=$line['max(idenvoi)']+1;
-                        echo "<input type=\"number\" name=\"idenvoi\" value='$id' required ><br>";
+                        echo "<input type=\"number\" name=\"idenvoi\"  placeholder='$id' required ><br>";
                         $conn->close();
                     ?>
                 <!-- <input type="number" name="idenvoi" required ><br> -->
@@ -71,7 +71,7 @@
   
 </div>
 
-<script src="../../Style/js/b.js"></script>
+    <script src="../../Style/js/nav.js"></script>
     <script>
         document.title="Envoyer"
         titre=document.querySelectorAll("#navbar")

@@ -49,7 +49,7 @@
         titre=document.querySelectorAll("#navbar")
         nav_courante("Voiture")
     </script>
-    <script src="../../Style/js/style.js"></script>
+    <script src="../../Style/js/nav.js"></script>
     <script>
         style(ajout)
     </script>

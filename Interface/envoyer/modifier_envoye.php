@@ -49,7 +49,7 @@
                             echo "<select><br>";             
           echo              " 
 
-                            <label for=\"colis\">colis</label>
+                            <label for=\"colis\">colis</label><br>
                             <input type=\"texte\" value=\"".$colis."\" name=\"colis_nouveau\"><br>
                             <label for=\"nomEnvoyeur\">Nom de l'envoyeur</label><br>
                             <input type=\"texte\" value=\"".$nomEnvoyer."\" name=\"nomEnvoyeur_nouveau\"><br>

@@ -6,18 +6,18 @@
                  <h1>Gestion d'envoye</h1>
                  <p>Recette total de coopérative :
 <?php include __DIR__. "/../../controleur/recette_total.php";?>
-    <!-- //     include __DIR__. "/../../controleur/recette_total.php"; -->
+   
          </p>
          <div>
          <p>Recherche entre deux date </p>
-           <form class="search" method="get" action="resultat_recherche.php" >
-         <input type="datetime-local\" name="date_dep" placeholder="date debut">
-         <input type="datetime-local" name="date_fin" placeholder="date fin">
-         <button type ="submit"><img class="icons"  src="../../Style/icons/search.png" alt="Recherche"></button>
-     </form>       
+           <div class="search"  >
+         <input type="datetime-local" name="date_dep" id="date_deb" placeholder="date debut">
+         <input type="datetime-local" name="date_fin" id="date_fin" placeholder="date fin">
+         <button  id="recherche_deux_date"><img class="icons"  src="../../Style/icons/search.png" alt="Recherche" title="recherche"></button>
+            </div>      
          </div>
                    <form class="search"  >
-                     <input type="search" id="recherche" name="recherche" placeholder="Recherche">
+                     <input type="search" id="recherche"  placeholder="Recherche">
                      <button type ="submit"><img class="icons"  src="../../Style/icons/search.png" alt="Recherche"></button>
              </form>
               
@@ -48,22 +48,9 @@
         body =document.getElementById('corps')
         nav_courante("Envoyer")
     </script>
-  <script>
-        const searchInput = document.getElementById('recherche');
-    const searchResults = document.getElementById('searchResults');
-      searchInput.addEventListener('input', ()=>{
-        var termes = searchInput.value.trim();
-        console.log(termes)
-        if(termes!==''){
-            const xhr =new XMLHttpRequest()
-            xhr.open('GET', 'recherche.php?q='+termes, true)
-            xhr.onload =function(){
-                searchResults.innerHTML=xhr.responseText
-            }
-            xhr.send()
-        }
-    })
-  </script>
+
+  <script src="../../Style/js/recherche_colis.js"></script>
+  <script src="../../Style/js/recherche_entre_deux_dates.js"></script>
 </body>
 </body>
 </html>

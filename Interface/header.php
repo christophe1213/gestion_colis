@@ -52,7 +52,7 @@ body{
     display: flex;
     position: absolute;
     top:-60px;
-    width: auto;
+    width: 700px;
     /* height: 90vh; */
     margin-top: 50px;
     margin-left: 300px;
@@ -64,6 +64,7 @@ body{
     display: flex;
     justify-content: center;
 }
+
 .tableau
 {   
     /* position: absolute;

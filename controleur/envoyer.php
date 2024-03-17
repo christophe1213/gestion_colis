@@ -2,36 +2,7 @@
     include "Execution_Requete.php";  
     function affichage_envoyer($c, $q)
     {
-        $query = "SELECT * FROM envoyer; ";
-        echo"<div class=\"b\">
-        <main class=\"table\">
-            <section class=\"table_header\">
-                <h1>Gestion d'envoye</h1>";
-           
-        echo "<p>Recette total de coopérative :";
-        include "recette_total.php";
-        echo "</p>";
-        echo "<div>
-        <p>Recherche entre deux date </p>
-          <form class=\"search\" method=\"get\" action=\"resultat_recherche.php\" >
-        <input type=\"datetime-local\" name=\"date_dep\" placeholder=\"date debut\">
-        <input type=\"datetime-local\" name=\"date_fin\" placeholder=\"date fin\">
-        <button type =\"submit\"><img class=\"icons\"  src=\"../../Style/icons/search.png\" alt=\"Recherche\"></button>
-    </form>       
-        </div>";
-                echo      "  <form class=\"search\" method=\"get\" action=\"resultat_recherche.php\" >
-                    <input type=\"search\" name=\"recherche\" placeholder=\"Recherche\">
-                    <button type =\"submit\"><img class=\"icons\"  src=\"../../Style/icons/search.png\" alt=\"Recherche\"></button>
-                </form>
-              
-                <a href=\"insertion_envoyer.php\"><img class=\"icons\" src=\"../../Style/icons/ajout.jfif\" alt=\"ajouter\" title=\"ajout\"\></a>
-    
-            
-    
-            </section>
-            <section class=\"table_body\">
-                ";
-        echo "<table class=\"tableau\">
+        echo "<table class=\"tableau\" id=\"searchResults\">
         <thead>
             <tr>
                 <th class=\"id\">Numero </th>
@@ -193,9 +164,13 @@
 
     function recherche($c, $r)
     {
-        $query_recherche="SELECT * FROM envoyer where idenvoi like \"%".$r."%\" or colis like \"%".$r."\" ;";
+        if($r==''){
+            affichage_envoyer($c,"SELECT * FROM envoyer;");   
+        }
+        else{
+        $query_recherche="SELECT * FROM envoyer where idenvoi like \"".$r."\" or colis like \"%".$r."%\" ;";
         affichage_envoyer($c,$query_recherche);
-
+        }
     }
 
     function recherche_entre_deux_date($c,$d1,$d2){

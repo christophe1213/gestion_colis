@@ -7,7 +7,7 @@ function execution_requete($c,$q){
     }
     else
     {
-        echo"echec".$c->error;
+        echo"echec";
     }
 }    
 

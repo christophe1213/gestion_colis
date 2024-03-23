@@ -8,38 +8,17 @@ require 'PHPMailer/src/PHPMailer.php';
 require 'PHPMailer/src/SMTP.php';
 //Create an instance; passing `true` enables exceptions
 
-    function affichage_recevoir($c, $q)
+    function affichage_recevoir($c)
     {
-        echo "    <div class=\"b\">
-                <main class=\"table\">
-            <section class=\"table_header\">
-                <h1>Recevoir</h1>
-                <a href=\"insertion_recevoir.php\"><img class=\"icons\" src=\"../../Style/icons/ajout.jfif\" alt=\"ajouter\" title=\"ajout\"></a>
-    
-            
-    
-            </section>
-            <section class=\"table_body\">";
-        echo "<table class=\"tableau\">
-        <thead>
-            <tr>
-                <th>Id de réception </th>
-                <th>Id d'envoyer </th>
-                <th>Date de reception</th>
-                <th>Modifier</th>
-                <th>Supprimer</th>
-            </tr>
-        </thead>
-        
-        <tbody>";    
+        $q = "SELECT * FROM recevoir; ";   
         $r = $c->query($q);
         if($r->num_rows>0){
             
             while($line = $r->fetch_assoc()){
-                 echo" <tr>";
-                 echo "<td>".$line["idrecept"]."</td>";
-                 echo "<td>".$line["idenvoi"]."</td>";
-                 echo "<td>".$line["date_recept"]."</td>";
+                echo" <tr>";
+                echo "<td>".$line["idrecept"]."</td>";
+                echo "<td>".$line["idenvoi"]."</td>";
+                echo "<td>".$line["date_recept"]."</td>";
                 echo "<td><a href=\"modifier_recevoir.php?id=".$line["idrecept"]."&idenvoi=".$line["idenvoi"]."&date_recept=".$line["date_recept"]."\">
                 <img src=\"../../Style/icons/modifier.jfif\" alt=\"modifier\" width=\"25px\" height=\"25px\"></a></td>";        
 
@@ -52,11 +31,6 @@ require 'PHPMailer/src/SMTP.php';
         else{
             echo" Aucune reception";
         }
-        echo"    </tbody>
-        </table>";
-        echo "</section>
-    
-        </div>";
     
     }
     

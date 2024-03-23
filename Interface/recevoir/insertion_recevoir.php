@@ -4,17 +4,17 @@
     //Fonction pour inserer des données
     insertion_recevoir($conn);
     include __DIR__."/../header.php";
-    // $query = "SELECT * FROM recevoir;";
-    // affichage_recevoir($conn, $query);
+
     $conn->close();
 
 ?>
-<div class="a">
-    <div class="contenaire">
-        <form  class="ajout" action="insertion_recevoir.php" method = "POST">
-            <a class="fermer" href="interface_recevoir.php"><img class="icons" src="../../Style/icons/delete.png" alt="fermer"></a>
-                <label for="idrecept">Id recption</label><br>
-                <input type="number" name="idrecept" ><br>
+ <div class="message">
+        <div class="container">
+        
+            <form action="insertion_Recevoir.php" method = "POST">
+            <a href="interface_Recevoir.php"><img src="../../Style/icons/delete.png" class="fermer" alt="fermer" title="fermer"></a>
+                <p class="tittre_message">Insertion</p>
+                <input type="number" name="idrecept" required placeholder="Id recption" ><br>
                 <label for="idenvoi">Id envoi</label><br>
                 <!-- <input type="number" name="idenvoi" ><br> -->
                 <select class="selection" name="idenvoi">
@@ -28,7 +28,6 @@
                     ?>
                 </select><br>
                 <label for="date_recept">date recption</label><br>
-                
                 <?php
                     include __DIR__. "/../../controleur/connection.php";
                     if($r = $conn->query("SELECT now();")){
@@ -42,12 +41,11 @@
                    }
                     $conn->close();
                 ?>
-                <input type="submit"value ="Ajouter" >
+                <input type="submit"value ="Ajouter"> 
 
-        </form>
+            </form>
+        </div>
     </div>
-
-</div>
 <script src="../../Style/js/nav.js"></script>
     <script>
         document.title="Recevoir"

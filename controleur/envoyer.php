@@ -1,25 +1,7 @@
 <?php
     include "Execution_Requete.php";  
     function affichage_envoyer($c, $q)
-    {
-        // echo "<table class=\"tableau\" id=\"searchResults\">
-        // <thead>
-        //     <tr>
-        //         <th class=\"id\">Numero </th>
-        //         <th > Voiture </th>
-        //         <th>Colis</th>
-        //         <th>Nom de l'envoyeur</th>
-        //         <th>Email </th>
-        //         <th class=\"date\"> date d'enoi </th>
-        //         <th class=\"frais\">frais</th>
-        //         <th>Nom de recepteur</th>
-        //         <th>Contact</th>
-        //         <th>Modifier</th>
-        //         <th>Supprimer</th>
-        //     </tr>
-        // </thead>
-        
-        // <tbody>";    
+    { 
         $r = $c->query($q);
         if($r->num_rows>0){
             
@@ -52,14 +34,7 @@
             }
         }
         else{
-            echo" <tr>";
-            echo "<td class=\"id\"></td>";
-            echo "<td class=\"idvoit\"></td>";
-            echo "<td class=\"colis\">Aucune envoyer</td>";
-         
-           
-            echo"</tr>";
-   
+            echo"";
         }
       
     

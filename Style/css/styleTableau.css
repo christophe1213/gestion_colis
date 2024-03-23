@@ -5,10 +5,25 @@ main.table{
     backdrop-filter: blur(7px);
     box-shadow: 0 .4rem .8rem #0005;
     border-radius: .8rem;
-    overflow: hidden;
+    /* overflow: hidden; */
     position:  absolute;
     top: 20%;
     /* visibility: hidden; */
+}
+#table_envoyer{
+    width: 95vw;
+  
+   
+    top:12%
+}
+#table_envoyer .table_body{
+    /* display: none; */
+    height:45vh;
+    position: relative;
+    top: 35%;
+}
+#table_envoye table{
+    margin: 0px;
 }
 .table_header{
     width: 100%;
@@ -22,7 +37,7 @@ main.table{
     background-color: #fffb;
     margin: .8rem auto;
     border-radius: .6rem;
-    overflow-y:auto;
+    overflow:auto;
 
 }
 .table_body::-webkit-scrollbar{
@@ -50,9 +65,8 @@ table,th,td{
     max-width: 150px;
 }
 .id{
-    width: 25px;
-    min-width: 25px;
-    max-width: 25px;; 
+    min-width: 35px;
+    max-width: 35px;; 
 }
 .idvoit{
     min-width: 60px;
@@ -63,16 +77,16 @@ table,th,td{
     max-width: 80px;
 }
 .NomEnvoyeur{
-    min-width: 150px;
-    max-width: 200px;
+    min-width: 100px;
+    max-width: 100px;
 
 }
 .email{
-    min-width: 150px;
-    max-width: 150px;
+    min-width: 250px;
+    max-width: 250px;
 }
 .date{
-    min-width: 150px;
+    min-width: 100px;
     max-width: 150px;
 }
 .frais{
@@ -80,8 +94,8 @@ table,th,td{
     max-width: 100px;
 }
 .nomRecept{
-    min-width: 150px;
-    max-width: 200px;
+    min-width: 100px;
+    max-width: 100px;
 }
 .contact{
     min-width: 100px;
@@ -102,7 +116,7 @@ table{
     width: 100%;
 }
 thead th{
-    position: sticky;
+    position:sticky;
     top: 0;
     left: 0;
     background-color: #d5d1defe;

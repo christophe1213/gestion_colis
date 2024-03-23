@@ -11,6 +11,9 @@
     left:0;
     z-index: 200;
 }
+#insertion_envoyer{
+    height: 150vh;
+}
 .container{
     position: relative;
     
@@ -137,4 +140,8 @@ input[type="submit"]{
 }
 .btn_confi_lien:hover{
     color: white;
+}
+.cherche{
+    /* display: none; */
+    border: none;
 }

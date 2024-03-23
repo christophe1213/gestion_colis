@@ -2,39 +2,39 @@
     include "Execution_Requete.php";  
     function affichage_envoyer($c, $q)
     {
-        echo "<table class=\"tableau\" id=\"searchResults\">
-        <thead>
-            <tr>
-                <th class=\"id\">Numero </th>
-                <th> Voiture </th>
-                <th>Colis</th>
-                <th>Nom de l'envoyeur</th>
-                <th>Email </th>
-                <th> date d'enoi </th>
-                <th>frais</th>
-                <th>Nom de recepteur</th>
-                <th>Contact</th>
-                <th>Modifier</th>
-                <th>Supprimer</th>
-            </tr>
-        </thead>
+        // echo "<table class=\"tableau\" id=\"searchResults\">
+        // <thead>
+        //     <tr>
+        //         <th class=\"id\">Numero </th>
+        //         <th > Voiture </th>
+        //         <th>Colis</th>
+        //         <th>Nom de l'envoyeur</th>
+        //         <th>Email </th>
+        //         <th class=\"date\"> date d'enoi </th>
+        //         <th class=\"frais\">frais</th>
+        //         <th>Nom de recepteur</th>
+        //         <th>Contact</th>
+        //         <th>Modifier</th>
+        //         <th>Supprimer</th>
+        //     </tr>
+        // </thead>
         
-        <tbody>";    
+        // <tbody>";    
         $r = $c->query($q);
         if($r->num_rows>0){
             
             while($line = $r->fetch_assoc()){
                  echo" <tr>";
                  echo "<td class=\"id\">".$line["idenvoi"]."</td>";
-                 echo "<td>".$line["idvoit"]."</td>";
-                 echo "<td>".$line["colis"]."</td>";
-                 echo "<td>".$line["nomEnvoyeur"]."</td>";
-                 echo "<td>".$line["emailEnvoyeur"]."</td>";
+                 echo "<td class=\"idvoit\">".$line["idvoit"]."</td>";
+                 echo "<td class=\"colis\">".$line["colis"]."</td>";
+                 echo "<td class=\"NomEnvoyeur\">".$line["nomEnvoyeur"]."</td>";
+                 echo "<td class=\"email\">".$line["emailEnvoyeur"]."</td>";
                  echo "<td class=\"date\">".$line["date_envoi"]."</td>";
                  echo "<td class=\"frais\">".$line["frais"]." Ar</td>";
-                 echo "<td>".$line["nomRecepteur"]."</td>";
-                 echo "<td>".$line["contactRecepteur"]."</td>";
-                echo "<td><a href=\"modifier_envoye.php?id=".$line["idenvoi"].
+                 echo "<td class=\"nomRecept\">".$line["nomRecepteur"]."</td>";
+                 echo "<td class=\"contact\">".$line["contactRecepteur"]."</td>";
+                echo "<td class=\"modifier\"><a href=\"modifier_envoye.php?id=".$line["idenvoi"].
                                                         "&idvoit=".$line["idvoit"].
                                                         "&colis=".$line["colis"].
                                                         "&nomEnvoyeur=".$line["nomEnvoyeur"].
@@ -45,28 +45,27 @@
                                                         "&contactRecepteur=".$line["contactRecepteur"]."\">
                 <img src=\"../../Style/icons/modifier.jfif\" alt=\"modifier\" width=\"25px\" height=\"25px\"></a></td>";        
 
-                echo "<td><a href=\"supprimer_envoye.php?id=".$line["idenvoi"]."\">
+                echo "<td class=\"supprimer\"><a href=\"supprimer_envoye.php?id=".$line["idenvoi"]."\">
                     <img src=\"../../Style/icons/supprimer.png\" alt=\"supprimer\" width=\"25px\" height=\"25px\"></a></td>";        
                  echo"</tr>";
         
             }
         }
         else{
-            echo" Aucune envoye";
+            echo" <tr>";
+            echo "<td class=\"id\"></td>";
+            echo "<td class=\"idvoit\"></td>";
+            echo "<td class=\"colis\">Aucune envoyer</td>";
+         
+           
+            echo"</tr>";
+   
         }
-        echo"    </tbody>
-        </table>";
-        echo"   </section>
-        </div>
-        ";
+      
     
     }
     
-    function ajout_envoyer($c)
-    {
-     echo "dd";
-    
-    }
+
     function insertion_envoyer($c)
     {  
         if( isset($_POST["idenvoi"])&&

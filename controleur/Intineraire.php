@@ -1,42 +1,20 @@
 <?php
     include "Execution_Requete.php";
-    function affichage_Intineraire($c, $q)
+    function affichage_Intineraire($c)
     {
-        echo"   <div class=\"b\">
-                    <main class=\"table\">
-                        <section class=\"table_header\">
-                            <h1>Intineraire</h1>
-              
-                <a id='ajout' href=\"insertion_intineraire.php\"><img class=\"icons\" src=\"../../Style/icons/ajout.jfif\" alt=\"ajouter\" title=\"ajout\"></a>
-    
-            
-    
-            </section>
-            <section class=\"table_body\">";
-        echo "<table class=\"tableau\">
-        <thead>
-            <tr>
-                <th>Code Intinéraire </th>
-                <th> ville départ </th>
-                <th>Ville d'arrivée</th>
-                <th>Modifier</th>
-                <th>Supprimer</th>
-            </tr>
-        </thead>
-        
-        <tbody>";    
-        $r = $c->query($q);
+        $query = "SELECT * FROM intineraire; ";
+        $r = $c->query($query);
         if($r->num_rows>0){
             
             while($line = $r->fetch_assoc()){
                  echo" <tr>";
                  echo "<td>".$line["codeit"]."</td>";
-                 echo "<td>".$line["villedep"]."</td>";
-                 echo "<td>".$line["villearriv"]."</td>";
-                 echo "<td><a id=\"modif\" href=\"modifier_Intineraire.php?id=".$line["codeit"]."&villedep=".$line["villedep"]."&villearriv=".$line["villearriv"]."\">
+                 echo "<td class=\"ville\">".$line["villedep"]."</td>";
+                 echo "<td class=\"ville\">".$line["villearriv"]."</td>";
+                 echo "<td class=\"modifier\"><a id=\"modif\" href=\"modifier_Intineraire.php?id=".$line["codeit"]."&villedep=".$line["villedep"]."&villearriv=".$line["villearriv"]."\">
                 <img src=\"../../Style/icons/modifier.jfif\" alt=\"modifier\" ></a></td>";        
 
-                echo "<td><a id=\"supp\" href=\"supprimer_Intineraire.php?id=".$line["codeit"]."\">
+                echo "<td class=\"supprimmer\"><a id=\"supp\" href=\"supprimer_Intineraire.php?id=".$line["codeit"]."\">
                     <img src=\"../../Style/icons/supprimer.png\" alt=\"supprimer\"></a></td>";        
                  echo"</tr>";
         
@@ -44,13 +22,8 @@
            
         }
         else{
-            echo"aucun intinéraire";
+            echo"";
         }
-        echo"    </tbody>
-        </table>";
-        echo "</section>
-    
-        </div>";
     }
     
     function ajout_Intinéraire($c)

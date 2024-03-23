@@ -1,0 +1,127 @@
+main.table{
+    /* width: 50vw; */
+    /* height: 90vh; */
+    background-color: #fff5;
+    backdrop-filter: blur(7px);
+    box-shadow: 0 .4rem .8rem #0005;
+    border-radius: .8rem;
+    overflow: hidden;
+    position:  absolute;
+    top: 20%;
+    /* visibility: hidden; */
+}
+.table_header{
+    width: 100%;
+    height: 10%;
+    background-color: #fff4;
+    padding: .8rem;
+}
+.table_body{
+    width: 95%;
+    max-height: calc(89%-.1.6rem);
+    background-color: #fffb;
+    margin: .8rem auto;
+    border-radius: .6rem;
+    overflow-y:auto;
+
+}
+.table_body::-webkit-scrollbar{
+    width: 0.5rem;
+    height: 0.5rem;            
+}
+.table_body::-webkit-scrollbar-thumb{
+    border-radius: .5rem;
+    background-color: #0004;
+    visibility: hidden;
+
+}
+   .table_body:hover::-webkit-scrollbar-thumb{
+    visibility: visible;
+    
+}
+table,th,td{
+    padding: 1rem;
+    border-collapse:collapse ;
+    text-align: left;
+
+}
+.ville{
+    min-width: 15%;
+    max-width: 150px;
+}
+.id{
+    width: 25px;
+    min-width: 25px;
+    max-width: 25px;; 
+}
+.idvoit{
+    min-width: 60px;
+    max-width: 60px;
+}
+.colis{
+    min-width: 80px;
+    max-width: 80px;
+}
+.NomEnvoyeur{
+    min-width: 150px;
+    max-width: 200px;
+
+}
+.email{
+    min-width: 150px;
+    max-width: 150px;
+}
+.date{
+    min-width: 150px;
+    max-width: 150px;
+}
+.frais{
+    min-width: 100px;
+    max-width: 100px;
+}
+.nomRecept{
+    min-width: 150px;
+    max-width: 200px;
+}
+.contact{
+    min-width: 100px;
+    max-width: 100px;
+}
+.modifier{
+    min-width: 100px;
+    max-width: 100px;
+    text-align: center;
+}
+.supprimer{
+    min-width: 100px;
+    max-width: 100px;
+    text-align: center;
+}
+
+table{
+    width: 100%;
+}
+thead th{
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: #d5d1defe;
+    /* background-color: midnightblue;
+    color: white; */
+}
+
+td img{
+    width: 25px;
+    height: 25px;
+}
+tbody tr:nth-child(even){
+    background-color: #0000000b; 
+
+}
+tbody tr:hover{
+    background-color: #fff6;
+}
+.icons{
+    width: 25px;
+    height: 25px;
+}

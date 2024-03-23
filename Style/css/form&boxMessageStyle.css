@@ -71,6 +71,17 @@ input[type="submit"]{
     width: 150px;
 
 }
+.selection{
+    margin: 10px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 10px;
+    border-radius: 20px;
+    text-align: center;
+}
+.selection:optional{
+    border-radius: 15px;
+}
 .fermer{
     width: 25px;
     height: 25px ;

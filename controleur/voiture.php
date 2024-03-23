@@ -1,33 +1,9 @@
 <?php
     include "Execution_Requete.php";
-    function affichage_voiture($c, $q)
-    {
-      
-        echo"   <div class=\"b\">
-                    <main class=\"table\">
-                        <section class=\"table_header\">
-                            <h1>Voiture</h1>
-              
-                <a href=\"insertion_voiture.php\"><img class=\"icons\" src=\"../../Style/icons/ajout.jfif\" alt=\"ajouter\" title=\"ajouter\"></a>
-    
-            
-    
-            </section>
-            <section class=\"table_body\">";
-        echo "<table class=\"tableau\">
-        <thead>
-            <tr>
-                <th>Id Voiture </th>
-                <th> Id Intineraire </th>
-                <th>Design</th>
-                <th>frais</th>
-                <th>Modifier</th>
-                <th>Supprimer</th>
-            </tr>
-        </thead>
-        
-        <tbody>"; 
-         $r = $c->query($q);
+    function affichage_voiture($c)
+    { 
+        $q= "SELECT * FROM voiture; ";
+        $r = $c->query($q);
         if($r->num_rows>0){
             
             while($line = $r->fetch_assoc()){
@@ -48,11 +24,6 @@
         else{
             echo" Aucune voiture";
         }
-        echo"    </tbody>
-        </table>";
-        echo "</section>
-    
-        </div>";
     
     }
     

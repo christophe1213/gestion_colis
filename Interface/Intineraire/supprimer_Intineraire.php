@@ -24,20 +24,6 @@ $conn->close();
         </div>
 
     </div>
-  <!-- <div class="message">
-        <div class="box_message">
-            <a href="fermer"><img class="icons" src="../../Style/icons/delete.png" alt="fermer" title="fermer"></a>
-            <p class="tittre_message">Vous voulez le supprimer</p>
-        
-                // echo"<button class=\"btn_confi\"><a class=\"btn_confi_lien\"  href=\"supprimer_intineraire.php?supp=ok&id=".$_GET['id']."\">OUI</a></button>
-                //     <button class=\"btn_confi\" ><a class=\"btn_confi_lien\"  href=\"interface_intineraire.php\">NON</a></button>";
-            ?>
-        
-        <!-- </div>
-
-    </div> -->
-
-
     <script src="../../Style/js/nav.js"></script>
     <script>
         document.title="Intineraire"

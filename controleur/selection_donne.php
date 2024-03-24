@@ -1,51 +1,39 @@
 <?php
   include "connection.php";
   function selection_donne($c,$id,$t){
-    $query="SELECT ".$id." FROM ".$t.";";
-    $q=$c->query($query);
-    if($q->num_rows>0){
-      while($line = $q->fetch_assoc())
-    {
-        echo "<option value=".$line[$id].">".$line[$id]."</option>";
+    selection_donne_modifie($c,$id,$t,'');
+}
+
+function selection_donne_modifie($c,$id,$t,$id_value)
+{
+  $query="SELECT * FROM ".$t.";";
+
+  if($t=='voiture'){
+    $query="select idvoit, villedep,villearriv from voiture, intineraire where voiture.codeit=intineraire.codeit;";
+  }
+  else if($t=="intineraire"){
+    $query= "";
+  }
+
+  $q=$c->query($query);
+  if($q->num_rows>0){
+    while($line = $q->fetch_assoc())
+  {
+    if($t=='envoyer'){
+      if($id_value==$line[$id])
+        echo "<option value=\"".$line[$id]."\"selected >".$line[$id]."</option>";
+        else echo "<option value=".$line[$id].">".$line[$id]."</option>";
+     }else{
+
+      if($id_value==$line[$id])
+      echo "<option value=\"".$line[$id]."\"selected >".$line[$id]." ( ".$line['villedep'].' à '.$line['villearriv'].' )'."</option>";
+      else echo "<option value=".$line[$id].">".$line[$id]." ( ".$line['villedep'].' à '.$line['villearriv'].' )'."</option>";
           
     }
-    }else{
-      echo "<option>vide</option>";
-    }
-    
-   
-}
-
-function selection_donne_intineraire($c){
-  $query ="SELECT * FROM Intineraire;";
-  $r = $c->query($query);
-  if($r->num_rows>0){
-      
-      while($line = $r->fetch_assoc()){
-        echo "<option value=".$line['codeit'].">".$line['codeit']." ( ".$line['villedep'].' à '.$line['villearriv'].' )'."</option>";
-      }
-     
+  
   }
-  else{
-      echo"aucun intinéraire";
-  }
-}
-
-function selection_donne_intineraire_2($c,$i){
-  $query ="SELECT * FROM Intineraire;";
-  $r = $c->query($query);
-  if($r->num_rows>0){
-      
-      while($line = $r->fetch_assoc()){
-        if($i==$line['codeit'])
-            echo "<option value=\"".$line['codeit']."\"selected >".$line['codeit']." ( ".$line['villedep'].' à '.$line['villearriv'].' )'."</option>";
-        else echo "<option value=".$line['codeit'].">".$line['codeit']." ( ".$line['villedep'].' à '.$line['villearriv'].' )'."</option>";
-      
-          }
-     
-  }
-  else{
-      echo"aucun intinéraire";
+  }else{
+    echo "<option>vide</option>";
   }
 }
 

@@ -11,7 +11,7 @@
             <form action="insertion_envoyer.php" method = "POST">
                 <a href="interface_Envoyer.php"><img src="../../Style/icons/delete.png" class="fermer" alt="fermer" title="fermer"></a>
                 <p class="tittre_message">Insertion d'envoie</p>
-                <input type="number" name="idenvoi" placeholder="Id envoi"><br>
+                <input type="number" id="idenvoi" name="idenvoi" placeholder="Id envoi"><br>
                 <select class="selection" name="idvoit">
                     <?php
                       
@@ -22,9 +22,9 @@
                         $conn->close();
                     ?>
                 </select><br>
-                <input type="text" name="colis" required placeholder="colis"><br>
+                <input type="text" name="colis" required placeholder="colis" ><br>
                 <label for="nomEnvoyeur">Nom de l'envoyeur</label><br>
-                <input type="text" name="nomEnvoyeur" ><br>
+                <input type="text" name="nomEnvoyeur" required ><br>
                 <input type="email" name="emailEnvoyeur" required placeholder="Email" ><br>
                 <label for="date_envoi">date d'envoi</label><br>
                 <?php
@@ -41,26 +41,23 @@
                   
                     $conn->close();
                 ?>
-                <input type="number" name="frais" placeholder="frais" ><br>
+                <input type="number" name="frais" placeholder="frais" required ><br>
                 <input type="text" name="nomRecepteur" required placeholder="Nom du recepteur" ><br>
-                <input type="text" id="contactRecepteur" name="contactRecepteur"  required maxlength="10" minlength="10" placeholder="contact du recepteur" ><br>
+                <input type="text" id="contactRecepteur" name="contactRecepteur" pattern="^0[3][2348][0-9]+" required maxlength="10" minlength="10" placeholder="contact du recepteur"  title="le numero que vous avez ajouté n'est pas valide, vérifiez votre champs"><br>
                 <input type="submit"value ="Ajouter" > 
             </form>
         </div>
     </div>
     <script src="../../Style/js/nav.js"></script>
+    <script src="http://localhost/gestion_colis/Ajax/js/verification_cle_primary.js"></script>
     <script>
         document.title="Envoyer"
         titre=document.querySelectorAll(".navbar a")
-    </script>
-    <script>
-        body =document.getElementById('corps')
         nav_courante("Envoyer")
+        verification_cle_primaire('idenvoi')    
+
     </script>
-    <script src="../../Style/js/style.js"></script>
-    <script>
-        style(ajout)
-    </script>
+
 
   
 </body>

@@ -22,15 +22,16 @@
         echo "<form action=\"modifier_voiture.php\" method=\"POST\">
                 <a class=\"fermer\" href=\"interface_Voiture.php\"><img class=\"icons\" src=\"../../Style/icons/delete.png\" alt=\"fermer\" title=\"fermer\"></a>                   
                 <p class=\"tittre_message\">Modifier Voiture</p>
-                <input type=\"texte\" value=\"".$idvoi."\" name=\"idvoit\"></br> 
+                <input type=\"texte\" value=\"".$idvoi."\" name=\"idvoit\" required></br> 
                 <label for=\"idvoi\"> Code Intineraire</label></br>
                 <select class=\"selection\" name=\"codeit_nouveau\">";
-        $i="codeit";$table="Intineraire".
+        $i="codeit";$table="Intineraire";
         //selection donnée pour code Intineraire
-            selection_donne_intineraire_2($conn,$codeit_modifier);
+            // selection_donne_intineraire_2($conn,$codeit_modifier);
+            selection_donne_modifie($conn, $i,$table,$codeit_modifier);
             echo "<select></br>";                
-            echo"<input type=\"texte\" value=\"".$Design_modifier."\" name=\"Design_nouveau\"></br>
-                <input type=\"number\" value=\"".$Frais_modifier."\" name=\"frais_nouveau\">
+            echo"<input type=\"texte\" value=\"".$Design_modifier."\" name=\"Design_nouveau\" required></br>
+                <input type=\"number\" value=\"".$Frais_modifier."\" name=\"frais_nouveau\" required>
                 <input type=\"submit\" value=\"Modifier\">
                 </form>";
         }

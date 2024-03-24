@@ -7,9 +7,7 @@ const searchResults = document.getElementById('searchResults');
         const xhr =new XMLHttpRequest()
         xhr.open('GET', 'http://localhost/gestion_colis/controleur/recherche.php?q='+termes, true)
         xhr.onload =function(){
-            searchResults.innerHTML=xhr.responseText
-    
-        
+            searchResults.innerHTML=xhr.responseText      
     }
       
     // }else{

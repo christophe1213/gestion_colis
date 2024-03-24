@@ -28,6 +28,7 @@
     
     function ajout_Intinéraire($c)
     {
+        
         if(isset($_POST["codeit"])&&isset($_POST["villedep"])&&isset($_POST["villearriv"])){
             $codeit = $_POST["codeit"];
             $villedep     = $_POST["villedep"] ;
@@ -37,7 +38,7 @@
                     (\"".$codeit."\",\"".$villedep."\",\"".$villearriv."\");";
             execution_requete($c, $query);
 
-          header("Location:interface_intineraire.php"); 
+        //   header("Location:interface_intineraire.php"); 
         }    
     }
     function modifier_intineraire($c)

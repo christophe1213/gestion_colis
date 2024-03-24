@@ -18,18 +18,15 @@
         </div>
 
     </div>
-    <script src="../../Style/js/nav.js"></script>
+    <script src="http://localhost/gestion_colis/Style/js/nav.js"></script>
+    <script src="http://localhost/gestion_colis/Style/js/menu.js"></script>
     <script>
         document.title="Recevoir"
         titre=document.querySelectorAll(".navbar a")
-    </script>
-    <script>
+ 
         nav_courante("Recevoir")
     
     </script>
-      <script src="../../Style/js/style.js"></script>
-    <script>
-        style(suppression)
-    </script>
+    
     <body>
     </html>

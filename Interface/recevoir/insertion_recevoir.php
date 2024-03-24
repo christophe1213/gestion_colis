@@ -14,7 +14,7 @@
             <form action="insertion_Recevoir.php" method = "POST">
             <a href="interface_Recevoir.php"><img src="../../Style/icons/delete.png" class="fermer" alt="fermer" title="fermer"></a>
                 <p class="tittre_message">Insertion</p>
-                <input type="number" name="idrecept" required placeholder="Id recption" ><br>
+                <input type="number" name="idrecept" id="idrecept"  required placeholder="Id recption" ><br>
                 <label for="idenvoi">Id envoi</label><br>
                 <!-- <input type="number" name="idenvoi" ><br> -->
                 <select class="selection" name="idenvoi">
@@ -46,19 +46,16 @@
             </form>
         </div>
     </div>
-<script src="../../Style/js/nav.js"></script>
+    <script src="http://localhost/gestion_colis/Style/js/nav.js"></script>
+    <script src="http://localhost/gestion_colis/Style/js/menu.js"></script>
+    <script src="http://localhost/gestion_colis/Ajax/verification_cle_primary.js"></script>
     <script>
         document.title="Recevoir"
-        titre=document.querySelectorAll("#navbar")
-    </script>
-    <script>
-        body =document.getElementById('corps')
+        titre=document.querySelectorAll(".navbar a")
         nav_courante("Recevoir")
+        verification_cle_primaire('idrecept')        
     </script>
-   <script src="../../Style/js/style.js"></script>
-    <script>
-        style(ajout)
-    </script>
+ 
 
 </<body>
 </html>

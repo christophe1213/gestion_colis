@@ -7,8 +7,8 @@ button_date.addEventListener('click', ()=>{
      const xhr =new XMLHttpRequest()
      xhr.open('GET', 'http://localhost/gestion_colis/controleur/recherche_entre_deux_dates.php?date_deb='+date_deb.value+'&date_fin='+date_fin.value, true)
      xhr.onload =function(){
-     searchResults.innerHTML=xhr.responseText
-     console.log(xhr.responseText)
+        searchResults.innerHTML=xhr.responseText
+        console.log(xhr.responseText)
  }
  xhr.send()
 })

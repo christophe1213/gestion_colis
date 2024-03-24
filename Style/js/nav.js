@@ -12,7 +12,7 @@ function nav_courante(nav){
     } 
 
  }
- document.body.style.background="url(../../Style/img/fond.avif) center/cover"
+//  document.body.style.background="url(../../Style/img/fond.avif) center/cover"
  titre[0].href="../../index.php"
 
 }

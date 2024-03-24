@@ -145,3 +145,12 @@ input[type="submit"]{
     /* display: none; */
     border: none;
 }
+.pdf{
+    border-radius:50px ;
+    width: 150px;
+    height: 50px;
+    color: #fff;
+    margin: 50px;
+    background-color: rgba(228, 59, 53, 0.966);
+    display: none;
+  } 

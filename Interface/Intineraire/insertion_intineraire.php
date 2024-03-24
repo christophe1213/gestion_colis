@@ -19,15 +19,12 @@
     </div>
      
     <script src="../../Style/js/nav.js"></script>
+    <script src="http://localhost/gestion_colis/Ajax/js/verification_cle_primary.js"></script>
     <script>
         document.title="Intineraire"
-        titre=document.querySelectorAll(".navbar a")
-       
-        nav_courante("Intineraire")    
-    </script>
-    <script src="../../Style/js/style.js"></script>
-    <script>
-        style(ajout)
+        titre=document.querySelectorAll(".navbar a")    
+        nav_courante("Intineraire")
+        verification_cle_primaire('codeit')    
     </script>
 
 </body>

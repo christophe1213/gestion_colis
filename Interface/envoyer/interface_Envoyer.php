@@ -55,24 +55,15 @@
         </table>
     </section>
  </main>   
-
-
-    <script src="../../Style/js/nav.js"></script>
+  <script src="http://localhost/gestion_colis/Ajax/rechercheColis.js"></script>
+  <script src="http://localhost/gestion_colis/Ajax/recherche_entre_deux_dates.js"></script>
+  <script src="http://localhost/gestion_colis/Style/js/nav.js"></script>
+  <script src="http://localhost/gestion_colis/Style/js/menu.js"></script>
     <script>
         document.title="Envoyer"
         titre=document.querySelectorAll(".navbar a")
-    </script>
-    <script>
- 
         nav_courante("Envoyer")
     </script>
-
-<script>
-  // var table_envoyer =document.getElementById('table_envoyer')
-  // table_envoyer.style.display="none"
-</script>
-  <script src="../../Style/js/rechercheColis.js"></script>
-  <script src="../../Style/js/recherche_entre_deux_dates.js"></script>
 </body>
 </body>
 </html>

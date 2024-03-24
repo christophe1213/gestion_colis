@@ -42,16 +42,17 @@
 
             $i="idvoit";$table="voiture";
             //selection donnée pour identification VOITURE
-            selection_donne($conn,$i,$table);
+            // selection_donne($conn,$i,$table);
+            selection_donne_modifie($conn,$i,$table,$idvoit);
             echo "<select><br>";             
-            echo "<input type=\"texte\" value=\"".$colis."\" name=\"colis_nouveau\"><br>
-            <input type=\"texte\" value=\"".$nomEnvoyer."\" name=\"nomEnvoyeur_nouveau\"><br>
-            <input type=\"datetime-local\" value=\"".$date_envoi."\" name=\"date_envoi_nouveau\"><br>
-            <input type=\"email\" value=\"".$email_envoi."\" name=\"emailEnvoyeur_nouveau\"><br>
+            echo "<input type=\"texte\" value=\"".$colis."\" name=\"colis_nouveau\" required><br>
+            <input type=\"texte\" value=\"".$nomEnvoyer."\" name=\"nomEnvoyeur_nouveau\" required><br>
+            <input type=\"datetime-local\" value=\"".$date_envoi."\" name=\"date_envoi_nouveau\" required><br>
+            <input type=\"email\" value=\"".$email_envoi."\" name=\"emailEnvoyeur_nouveau\" required><br>
             <label for=\"frais\">Frais</label><br>
-            <input type=\"number\" value=\"".$frais."\" name=\"frais_nouveau\"><br>
-            <input type=\"texte\" value=\"".$nomRecepteur."\" name=\"nomRecepteur_nouveau\"><br>
-            <input type=\"texte\" value=\"".$contactRecepteur."\" name=\"contactRecepteur_nouveau\"><br>
+            <input type=\"number\" value=\"".$frais."\" name=\"frais_nouveau\" reqquired><br>
+            <input type=\"texte\" value=\"".$nomRecepteur."\" name=\"nomRecepteur_nouveau\" required><br>
+            <input type=\"tel\" value=\"".$contactRecepteur."\" name=\"contactRecepteur_nouveau\" pattern=\"^0[3][2348][0-9]+\" required maxlength=\"10\" minlength=\"10\" placeholder=\"contact du recepteur\"  title=\"le numero que vous avez ajouté n'est pas valide, vérifiez votre champs\"><br>
             <input type=\"submit\" value=\"Modifier\">
         </form>";
   }else{

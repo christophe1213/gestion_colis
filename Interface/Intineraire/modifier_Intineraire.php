@@ -15,9 +15,9 @@
             echo"<form action=\"modifier_Intineraire.php\" method = \"POST\">
                     <a class=\"fermer\" href=\"interface_intineraire.php\"><img class=\"icons\" src=\"../../Style/icons/delete.png\" alt=\"fermer\" title=\"fermer\"></a>
                     <p class=\"tittre_message\">Modifier l'intineraire</p>
-                    <input type=\"texte\" value=\"".$codeit_modifier."\"  name=\"codeit_nouveau\">
-                    <input type=\"texte\" value=\"".$villedep_modifier."\" name=\"villedep_nouveau\">
-                    <input type=\"texte\" value=\"".$villearriv_modifier."\" name=\"villearriv_nouveau\">
+                    <input type=\"texte\" value=\"".$codeit_modifier."\"  name=\"codeit_nouveau\" required>
+                    <input type=\"texte\" value=\"".$villedep_modifier."\" name=\"villedep_nouveau\" required>
+                    <input type=\"texte\" value=\"".$villearriv_modifier."\" name=\"villearriv_nouveau\" required>
                     <input type=\"submit\" value=\"Modifier\">
                 </form>";
             }

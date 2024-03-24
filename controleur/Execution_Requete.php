@@ -2,7 +2,7 @@
     
 function execution_requete($c,$q){
     if($c->query($q)){
-        // echo "Requète reussi";
+        echo "Requète reussi";
     
     }
     else

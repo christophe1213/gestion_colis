@@ -14,7 +14,7 @@
             <form action="insertion_voiture.php" method = "POST">
             <a href="interface_voiture.php"><img src="../../Style/icons/delete.png" class="fermer" alt="fermer" title="fermer"></a>
                 <p class="tittre_message">Insertion du voiture du voiture</p>
-                <input type="text" name="idvoit" id="idvoit" required placeholder="Id Voiture" ><br>
+                <input type="text" name="idvoit" id="idvoit" required placeholder="Id Voiture" pattern="[V][0-9]+"title="le format pour l'id voiture est V suivi d'un nombre" ><br>
                 <label for="codeit">Code intinéraire</label><br>
                 <select name="codeit" class='selection'><br>
                     <?php 

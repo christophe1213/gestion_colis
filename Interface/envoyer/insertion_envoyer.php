@@ -23,7 +23,6 @@
                     ?>
                 </select><br>
                 <input type="text" name="colis" required placeholder="colis" ><br>
-                <label for="nomEnvoyeur">Nom de l'envoyeur</label><br>
                 <input type="text" name="nomEnvoyeur" required ><br>
                 <input type="email" name="emailEnvoyeur" required placeholder="Email" ><br>
                 <label for="date_envoi">date d'envoi</label><br>
@@ -48,8 +47,9 @@
             </form>
         </div>
     </div>
-    <script src="../../Style/js/nav.js"></script>
-    <script src="http://localhost/gestion_colis/Ajax/js/verification_cle_primary.js"></script>
+    <script src="http://localhost/gestion_colis/Style/js/nav.js"></script>
+    <script src="http://localhost/gestion_colis/Style/js/menu.js"></script>
+    <script src="http://localhost/gestion_colis/Ajax/verification_cle_primary.js"></script>
     <script>
         document.title="Envoyer"
         titre=document.querySelectorAll(".navbar a")

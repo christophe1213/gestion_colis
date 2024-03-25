@@ -38,7 +38,7 @@
                     (\"".$codeit."\",\"".$villedep."\",\"".$villearriv."\");";
             execution_requete($c, $query);
 
-        //   header("Location:interface_intineraire.php"); 
+          header("Location:interface_intineraire.php"); 
         }    
     }
     function modifier_intineraire($c)

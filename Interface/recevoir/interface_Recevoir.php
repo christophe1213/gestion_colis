@@ -10,7 +10,7 @@
         <table>
             <thead>
                 <tr>
-                    <th>idreceot</th>
+                    <th>idrecept</th>
                     <th>idenvoi</th>
                     <th>date de</th>
                     <th>Modifier</th>

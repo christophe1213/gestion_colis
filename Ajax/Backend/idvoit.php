@@ -7,8 +7,12 @@ header('Content-Type: application/json');
 include __DIR__ ."/../../controleur/connection.php";
     $querry="SELECT idvoit FROM VOITURE ;";
     $r= $conn->query($querry);
-    while($row= $r->fetch_assoc()){
-        $data[] = $row["idvoit"];
+    if( $r->num_rows > 0){
+        while($row= $r->fetch_assoc()){
+            $data[] = $row["idvoit"];
+        }
+    }else{
+    $data="null";
     }
     echo json_encode($data);
     $conn->close();

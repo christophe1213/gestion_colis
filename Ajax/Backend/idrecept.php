@@ -8,8 +8,12 @@ include __DIR__ ."/../../controleur/connection.php";
 
     $querry="SELECT idrecept FROM recevoir ;";
     $r= $conn->query($querry);
-    while($row= $r->fetch_assoc()){
-        $data[] = $row["idrecept"];
+    if( $r->num_rows > 0){
+        while($row= $r->fetch_assoc()){
+            $data[] = $row["idrecept"];
+        }
+    }else{
+        $data="null";
     }
     echo json_encode($data);
     $conn->close();

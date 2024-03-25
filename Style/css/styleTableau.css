@@ -33,6 +33,7 @@ main.table{
 }
 .table_body{
     width: 95%;
+    height:58vh;
     max-height: calc(89%-.1.6rem);
     background-color: #fffb;
     margin: .8rem auto;
@@ -120,8 +121,6 @@ thead th{
     top: 0;
     left: 0;
     background-color: #d5d1defe;
-    /* background-color: midnightblue;
-    color: white; */
 }
 
 td img{

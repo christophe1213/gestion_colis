@@ -14,7 +14,7 @@ $conn->close();
 ?>
   <div class="message">
         <div class="box_message">
-            <a href=""><img class="fermer" src="../../Style/icons/delete.png" alt="fermer" title="fermer"></a>
+        <a href="interface_intineraire.php"><img src="../../Style/icons/delete.png" class="fermer" alt="fermer" title="fermer"></a>
             <p class="tittre_message">Vous voulez le supprimer</p>
             <?php
               echo"<button class=\"btn_confi\"><a class=\"btn_confi_lien\"  href=\"supprimer_intineraire.php?supp=ok&id=".$_GET['id']."\">OUI</a></button>

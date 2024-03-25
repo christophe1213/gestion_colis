@@ -150,7 +150,8 @@ input[type="submit"]{
     width: 150px;
     height: 50px;
     color: #fff;
-    margin: 50px;
+    margin: 20px;
+    margin-top: -50px;
     background-color: rgba(228, 59, 53, 0.966);
-    display: none;
+
   } 

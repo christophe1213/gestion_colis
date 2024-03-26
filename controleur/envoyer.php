@@ -142,7 +142,7 @@
             affichage_envoyer($c,"SELECT * FROM envoyer;");   
         }
         else{
-        $query_recherche="SELECT * FROM envoyer where idenvoi like \"".$r."\" or colis like \"%".$r."%\" ;";
+        $query_recherche="SELECT * FROM envoyer where idenvoi like '$r' or colis like '$r' ;";
         affichage_envoyer($c,$query_recherche);
         }
     }

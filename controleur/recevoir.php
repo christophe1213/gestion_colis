@@ -88,7 +88,7 @@ require 'PHPMailer/src/SMTP.php';
                                       where idrecept=\"".$idrecpt."\";";
 
           execution_requete($c, $query);
-          header("Location:recevoir_interface.php"); 
+          header("Location:interface_recevoir.php");  
              
         }   
     }

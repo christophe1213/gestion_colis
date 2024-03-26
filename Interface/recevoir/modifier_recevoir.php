@@ -20,8 +20,7 @@
              echo "<form action=\"modifier_recevoir.php\" method=\"POST\">
              <a class=\"fermer\" href=\"interface_recevoir.php\"><img class=\"icons\" src=\"../../Style/icons/delete.png\" alt=\"fermer\" title=\"fermer\"></a>
              <p class=\"tittre_message\">Modification</p>
-             <label for=\"idrecept\">N° reception</label>
-                            <input type=\"number\" value=\"".$idrecpt."\" name=\"idrecept\" required><br>
+                            <input type=\"number\" value=\"".$idrecpt."\" name=\"idrecept\" placeholder=\"id reception\" required><br>
                             <label for=\"idenvoi\">N° envoye</label><br>
                             <select class=\"selection\" name=\"idenvoi_nouveau\"><br>";
                             $i="idenvoi";$table="envoyer";

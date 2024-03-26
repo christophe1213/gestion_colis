@@ -6,7 +6,6 @@
 }
 body{
     min-width: 100vh;
-    background-color: white;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -47,6 +46,30 @@ header{
 .navbar a:hover{
     text-decoration: underline;
 }
+.welcome{
+    background:url(Style/img/fond.avif) center/cover ;
+    display: flex;
+    width:100vw ;
+    /* background-color: beige; */
+    height: 80vh;
+
+    padding: 150px;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    top: 80px;
+    left:0;
+    z-index: 200;
+}
+#welcome{
+    /* color: #fff; */
+    color: black;
+    font-family:cursive;
+    font-size: 3rem;
+    font-weight: 500;
+}
+
 
 @media screen and (max-width:900px){
     .navbar a{ 

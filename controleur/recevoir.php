@@ -67,6 +67,7 @@ require 'PHPMailer/src/SMTP.php';
     }
     else {
         echo "Une erreur s'est produite";
+        
     }
     
 
@@ -120,7 +121,7 @@ require 'PHPMailer/src/SMTP.php';
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
         $mail->Port       = 465;
         $mail->setFrom($from_email, $from_name);
-        $mail->addAddress('christophejaosoa78@gmail.com','AthenaTech');
+        $mail->addAddress($from_email,'AthenaTech');
         $mail->isHTML(true);                                 
         $mail->Subject = 'Reception colis';
         $mail->Body    = " Chère ".$nomEnvoyer.", votre colis  que vous avez envoyée est bien réçu par :".$nomRecept." le ".$date_re;

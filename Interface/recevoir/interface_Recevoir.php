@@ -12,7 +12,7 @@
                 <tr>
                     <th>idrecept</th>
                     <th>idenvoi</th>
-                    <th>date de</th>
+                    <th>date de réception</th>
                     <th>Modifier</th>
                     <th>Supprimer</th>
         

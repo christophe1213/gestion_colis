@@ -2,7 +2,7 @@
 <?php include __DIR__."/../header.php";?>
 <main  class="table" id="table_envoyer">
     <section class="table_header">
-        <h1>The Table</h1>
+        <h1>Envoyer</h1>
         <p>Recette total de coopérative :
                   <?php include __DIR__. "/../../controleur/recette_total.php";?>
    

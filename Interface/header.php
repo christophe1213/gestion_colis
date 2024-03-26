@@ -10,7 +10,7 @@
 </head>
 <body>
     <header>
-        <a class="logo" href="#">Géstion de Colis Coopérative</a>
+        <a class="logo" href="#">Géstion des Colis d'une Coopérative</a>
         <nav class="navbar">
             <a href="index">Aceuil</a>
             <a href="Interface/Intineraire/interface_intineraire.php">Intineraire</a>

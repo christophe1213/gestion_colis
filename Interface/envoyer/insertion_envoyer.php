@@ -10,7 +10,7 @@
             <div class="container">
             <form action="insertion_envoyer.php" method = "POST">
                 <a href="interface_Envoyer.php"><img src="../../Style/icons/delete.png" class="fermer" alt="fermer" title="fermer"></a>
-                <p class="tittre_message">Insertion d'envoie</p>
+                <p class="tittre_message">Insertion</p>
                 <input type="number" id="idenvoi" name="idenvoi" placeholder="Id envoi"><br>
                 <select class="selection" name="idvoit">
                     <?php

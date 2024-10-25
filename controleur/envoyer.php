@@ -104,7 +104,7 @@
             
 
             $query="UPDATE envoyer set idvoit=\"".$idvoit."\",
-                                      colis=\"".$colis."\",
+           d                           colis=\"".$colis."\",
                                       nomEnvoyeur=\"".$nomEnvoyer."\",
                                       date_envoi=\"".$date_envoi."\",
                                       emailEnvoyeur=\"".$email_envoi."\",

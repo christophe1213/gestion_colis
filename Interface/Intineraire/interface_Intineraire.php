@@ -21,10 +21,10 @@
                     <?php
                         include __DIR__."/../../controleur/Intineraire.php";
                         include __DIR__ ."/../../controleur/connection.php";
-                        //Affichage de donnée
+                        // //Affichage de donnée
 
                         affichage_Intineraire($conn);      
-                        $conn->close();
+                        // $conn->close();
                     ?>
                 </tbody>
             </table>
